@@ -1,0 +1,73 @@
+﻿@startuml 10-sequence-confirm
+' 二手交易系统 —— 卖家确认 / 买家完成时序图（交互性图）
+skinparam backgroundColor #FFFFFF
+skinparam dpi 150
+skinparam defaultFontName "Microsoft YaHei"
+skinparam defaultFontSize 12
+skinparam shadowing false
+skinparam ArrowColor #4A6573
+skinparam ArrowFontSize 10
+skinparam sequence {
+  ParticipantBackgroundColor #F4F8FA
+  ParticipantBorderColor #4A6573
+  ParticipantFontColor #18334B
+  LifeLineBorderColor #9DB4C0
+  GroupBorderColor #9DB4C0
+  GroupHeaderFontColor #18334B
+  GroupBackgroundColor #F7FAFB
+}
+skinparam note {
+  BackgroundColor #FFF8E6
+  BorderColor #D9B45B
+  FontSize 10
+}
+autonumber
+
+actor 卖家 as S
+actor 买家 as B
+participant "Web 前端" as FE
+participant "预约交易服务" as RS
+participant "商品管理服务" as IS
+database "数据库" as DB
+participant "站内通知" as MSG
+participant "到期任务" as JOB
+
+== 卖家确认（到期前） ==
+S -> FE : 点击“确认预约”
+FE -> RS : POST /api/reservations/{id}/confirm\n{requestId}
+RS -> DB : 读取预约、商品最新状态与版本
+alt 已到期或已被其他动作改变
+  RS -> IS : 触达到期释放并刷新状态
+  RS --> FE : 失败：已到期 / 已被取消 / 版本过期
+else 待卖家确认且 now < 到期时间
+  RS -> DB : 事务：预约 = 已确认\n商品 = 交易中，记录确认时间
+  RS -> MSG : 确认消息（去重）
+  RS --> FE : 成功，展示线下交付提示
+end
+
+== 买家完成 ==
+B -> FE : 线下收到物品后点击“确认完成”
+FE -> RS : POST /api/reservations/{id}/complete\n{requestId}
+RS -> DB : 校验操作者为本笔买家、预约已确认、商品交易中
+alt 非本笔买家 / 状态不符
+  RS --> FE : 拒绝：仅本笔买家可完成
+else 可完成
+  RS -> DB : 事务：预约 = 已完成\n商品 = 已售出，记录完成时间
+  RS -> MSG : 完成消息（去重）
+  RS --> FE : 成功
+  FE --> B : 提示“已确认收到物品，交易完成”
+end
+
+== 重试与到期 ==
+loop 每分钟
+  JOB -> RS : expireDue(now)
+  RS -> DB : 同事务：预约 = 已超时\n商品恢复“已发布”
+end
+
+note over RS
+  同一 requestId 重发只返回首次结果，
+  不新增成交笔数；完成请求重发 10 次
+  成交仍只计一次。已完成后不得再按
+  解除确认异常关闭。
+end note
+@enduml

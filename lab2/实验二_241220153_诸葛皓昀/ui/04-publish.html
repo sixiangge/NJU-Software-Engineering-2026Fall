@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>拾集 · 发布闲置</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="02-browse.html">
+    <div class="brand-mark"></div>
+    <div><div class="brand-name">拾集</div><div class="brand-sub">SECONDHAND</div></div>
+  </a>
+  <nav class="nav">
+    <a href="02-browse.html">逛市场</a>
+    <a href="05-workspace.html">我买到的</a>
+    <a class="active" href="05-workspace.html">我发布的</a>
+    <a href="09-messages.html">消息</a>
+  </nav>
+  <div class="search">
+    <svg class="icon sm" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+    <input placeholder="搜索标题或描述">
+  </div>
+  <div class="top-actions">
+    <a class="btn btn-primary btn-sm" href="04-publish.html" style="height:34px;padding:0 14px">发布闲置</a>
+    <a class="icon-btn" href="09-messages.html">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 8-3 8h18s-3-1-3-8"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+    </a>
+    <div class="avatar">林</div>
+  </div>
+</header>
+
+<main class="page">
+  <div class="page-head">
+    <div>
+      <div class="page-title">发布闲置</div>
+      <div class="page-sub">草稿已自动保存于 15:42 · 提交审核前可随时修改</div>
+    </div>
+    <a class="link muted" href="05-workspace.html">返回我的商品</a>
+  </div>
+
+  <div class="publish-grid">
+    <div class="card">
+      <div class="form-section">
+        <div class="section-title"><span class="step">1</span> 商品图片 <span class="tiny muted" style="font-weight:400">已上传 3 / 9 张</span></div>
+        <div class="upload-grid">
+          <div class="upload" style="background:linear-gradient(145deg,#eaf2f1,#d5e5e1)">
+            <span class="del">×</span>
+            <svg viewBox="0 0 120 90" style="width:100%;height:100%"><rect x="28" y="16" width="64" height="42" rx="4" fill="rgba(255,255,255,.7)" stroke="rgba(15,118,110,.45)" stroke-width="2"/><path d="M52 58h16l4 12H48z" fill="rgba(255,255,255,.8)" stroke="rgba(15,118,110,.4)" stroke-width="2"/></svg>
+          </div>
+          <div class="upload" style="background:linear-gradient(145deg,#e6efee,#d1e1dd)">
+            <span class="del">×</span>
+            <svg viewBox="0 0 120 90" style="width:100%;height:100%"><rect x="24" y="22" width="72" height="36" rx="4" fill="rgba(255,255,255,.6)" stroke="rgba(15,118,110,.4)" stroke-width="2"/><path d="M34 38h34M34 48h46" stroke="rgba(15,118,110,.3)" stroke-width="2"/></svg>
+          </div>
+          <div class="upload" style="background:linear-gradient(145deg,#efe9e1,#dfd2c3)">
+            <span class="del">×</span>
+            <svg viewBox="0 0 120 90" style="width:100%;height:100%"><rect x="38" y="14" width="44" height="52" rx="3" fill="rgba(255,255,255,.6)" stroke="rgba(120,86,36,.4)" stroke-width="2"/><path d="M46 28h28M46 38h28M46 48h18" stroke="rgba(120,86,36,.3)" stroke-width="2"/></svg>
+          </div>
+          <div class="upload add">
+            <svg class="icon" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+            <span>添加图片</span>
+          </div>
+        </div>
+        <div class="hint" style="margin-top:8px;color:var(--muted);font-size:11.5px">支持 JPEG / PNG，单张不超过 5 MB；首图将作为列表封面，送审需至少 1 张。</div>
+      </div>
+
+      <div class="form-section">
+        <div class="section-title"><span class="step">2</span> 基本信息</div>
+        <div class="field" style="margin-bottom:14px">
+          <label>标题</label>
+          <input class="input" value="戴尔 U2723QE 27 英寸 4K 显示器，箱说全">
+          <div class="between"><span class="hint">建议包含品牌、型号与关键配置</span><span class="hint">23 / 40</span></div>
+        </div>
+        <div class="field">
+          <label>描述</label>
+          <textarea class="textarea">2024 年购入，屏幕无坏点、无划痕，支架升降与旋转正常。原装电源、DP 线与包装箱齐全，可当面通电验机。</textarea>
+        </div>
+      </div>
+
+      <div class="form-section">
+        <div class="section-title"><span class="step">3</span> 交易信息</div>
+        <div class="form-grid">
+          <div class="field">
+            <label>分类</label>
+            <select class="select"><option>数码电子 / 显示器</option><option>数码电子 / 电脑</option><option>图书教材</option></select>
+          </div>
+          <div class="field">
+            <label>成色</label>
+            <select class="select"><option>95 新</option><option>9 成新</option><option>8 成新</option></select>
+          </div>
+          <div class="field">
+            <label>价格（元）</label>
+            <input class="input error" value="1280.567">
+            <div class="err"><svg class="icon sm" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg> 价格需大于 0，且最多保留两位小数</div>
+          </div>
+          <div class="field">
+            <label>交易地点</label>
+            <input class="input" value="仙林校区 · 图书馆东门">
+            <div class="hint">仅向浏览者展示大致地点，联系方式在预约有效期内可见。</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="action-bar">
+        <div class="row small muted">
+          <svg class="icon sm" viewBox="0 0 24 24"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 21h16"/></svg>
+          保存草稿不会提交审核，可稍后继续
+        </div>
+        <div class="row">
+          <button class="btn btn-ghost">保存草稿</button>
+          <button class="btn btn-primary">提交审核</button>
+        </div>
+      </div>
+    </div>
+
+    <aside class="stack">
+      <div class="card checklist">
+        <div class="between">
+          <div class="card-title" style="font-size:13.5px">发布清单</div>
+          <span class="badge amber">1 项待修正</span>
+        </div>
+        <div class="progress"><i style="width:86%"></i></div>
+        <div class="tiny muted" style="margin-bottom:8px">完成度 6 / 7</div>
+        <div class="checklist-item"><span class="tick">✓</span> 标题完整</div>
+        <div class="checklist-item"><span class="tick">✓</span> 描述包含使用情况</div>
+        <div class="checklist-item"><span class="tick">✓</span> 已选择分类</div>
+        <div class="checklist-item"><span class="tick warn">!</span> 价格格式需修正</div>
+        <div class="checklist-item"><span class="tick">✓</span> 已选择成色</div>
+        <div class="checklist-item"><span class="tick">✓</span> 已填写交易地点</div>
+        <div class="checklist-item"><span class="tick">✓</span> 已上传 3 张图片</div>
+      </div>
+
+      <div class="card">
+        <div class="card-head"><div class="card-title" style="font-size:13.5px">发布须知</div></div>
+        <div class="card-body" style="padding-top:12px">
+          <div class="small muted" style="line-height:2">
+            · 提交后商品进入“待审核”，审核期间不可直接修改。<br>
+            · 审核通过后公开显示；驳回时会给出具体原因。<br>
+            · 有效预约期间不可改价、改资料或普通下架。<br>
+            · 已售出商品不可修改或恢复发布。
+          </div>
+        </div>
+      </div>
+    </aside>
+  </div>
+</main>
+</body>
+</html>

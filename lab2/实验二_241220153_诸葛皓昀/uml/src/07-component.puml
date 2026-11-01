@@ -1,0 +1,98 @@
+﻿@startuml 07-component
+' 二手交易系统 —— 组件图（结构性图）
+top to bottom direction
+skinparam backgroundColor #FFFFFF
+skinparam dpi 150
+skinparam defaultFontName "Microsoft YaHei"
+skinparam defaultFontSize 12
+skinparam shadowing false
+skinparam componentStyle rectangle
+skinparam ArrowColor #4A6573
+skinparam ArrowFontSize 9
+skinparam component {
+  BackgroundColor #F4F8FA
+  BorderColor #4A6573
+  FontColor #18334B
+  FontSize 11
+}
+skinparam package {
+  BackgroundColor #FFFFFF
+  BorderColor #9DB4C0
+  FontColor #18334B
+  FontSize 12
+}
+skinparam database {
+  BackgroundColor #EAF2F5
+  BorderColor #4A6573
+  FontColor #18334B
+}
+skinparam note {
+  BackgroundColor #FFF8E6
+  BorderColor #D9B45B
+  FontSize 9
+}
+
+component "买家 / 卖家前台\n响应式 Web" as FE
+component "管理后台\n审核 · 违规 · 统计 · 日志" as ADMIN
+
+package "接入层" as ACCESS {
+  component "统一接口层\n身份与归属鉴权 · 参数校验\n请求标识 · 错误码" as API
+}
+
+package "业务模块（模块化单体）" as BIZ {
+  component "M1 账号与权限" as M1
+  component "M2 商品管理" as M2
+  component "M3 商品查询" as M3
+  component "M4 预约交易" as M4
+  component "M5 审核与违规" as M5
+  component "M6 统计报表" as M6
+  component "M7 基础数据" as M7
+  component "M8 站内通知" as M8
+  component "M9 审计日志" as M9
+
+  M1 -[hidden]right- M2
+  M2 -[hidden]right- M3
+  M7 -[hidden]right- M4
+  M4 -[hidden]right- M6
+  M9 -[hidden]right- M5
+  M5 -[hidden]right- M8
+  M1 -[hidden]down- M7
+  M7 -[hidden]down- M9
+  M2 -[hidden]down- M4
+  M4 -[hidden]down- M5
+  M3 -[hidden]down- M6
+  M6 -[hidden]down- M8
+
+  M3 --> M2 : 只读查询
+  M4 --> M2 : 占用 / 释放
+  M5 --> M2 : 审核 / 违规
+  M5 --> M4 : 关闭预约
+  M2 --> M7 : 启用分类
+  M1 --> M7 : 邀请码
+  M6 --> M2 : 库存口径
+  M6 --> M4 : 成交口径
+  M4 --> M8 : 交易事件
+  M5 --> M8 : 违规事件
+}
+
+package "平台支撑" as INFRA {
+  component "请求幂等 · 到期调度 · 文件存储\n事务与事件投递 · 备份恢复" as S
+}
+
+database "关系数据库\n业务 · 请求记录 · 审计" as DB
+database "备份介质" as BACKUP
+
+FE --> API
+ADMIN --> API
+API --> BIZ
+BIZ --> INFRA
+INFRA --> DB
+DB --> BACKUP : 每日备份
+
+note right of S
+  预约与审核类变更使用请求幂等；
+  到期释放由调度器每分钟触发；
+  商品图片存于文件目录；
+  通知以事务内事件投递，失败可重试。
+end note
+@enduml

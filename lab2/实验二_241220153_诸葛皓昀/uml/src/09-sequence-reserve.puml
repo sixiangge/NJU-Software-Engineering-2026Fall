@@ -1,0 +1,71 @@
+﻿@startuml 09-sequence-reserve
+' 二手交易系统 —— 预约商品时序图（交互性图）
+skinparam backgroundColor #FFFFFF
+skinparam dpi 150
+skinparam defaultFontName "Microsoft YaHei"
+skinparam defaultFontSize 12
+skinparam shadowing false
+skinparam ArrowColor #4A6573
+skinparam ArrowFontSize 10
+skinparam sequence {
+  ParticipantBackgroundColor #F4F8FA
+  ParticipantBorderColor #4A6573
+  ParticipantFontColor #18334B
+  LifeLineBorderColor #9DB4C0
+  LifeLineBackgroundColor #FFFFFF
+  GroupBorderColor #9DB4C0
+  GroupHeaderFontColor #18334B
+  GroupBackgroundColor #F7FAFB
+}
+skinparam note {
+  BackgroundColor #FFF8E6
+  BorderColor #D9B45B
+  FontSize 10
+}
+autonumber
+
+actor 买家 as B
+participant "Web 前端" as FE
+participant "统一接口层" as API
+participant "预约交易服务" as RS
+participant "商品管理服务" as IS
+participant "幂等组件" as ID
+database "数据库" as DB
+participant "审计日志" as LOG
+participant "站内通知" as MSG
+
+B -> FE : 点击“立即预约”
+FE -> API : POST /api/reservations\n{requestId, itemId}
+API -> API : 校验登录、封禁与角色
+API -> RS : createReserve(buyerId, itemId, requestId)
+RS -> ID : 按用户 + 操作 + requestId 查询
+
+alt 已处理且内容一致
+  ID --> RS : 首次业务结果
+  RS --> FE : 原预约编号 + 有权查看的当前状态
+else 新请求
+  RS -> IS : 先做到期释放，再读取最新状态与版本
+  alt 商品不可预约
+    IS --> RS : 已被占用 / 非“已发布”
+    RS --> FE : 占用冲突 + 最新状态
+  else 可预约
+    RS -> DB : 事务开始\n写预约（待卖家确认、快照、24 小时到期）\n商品置为“已预约”（乐观锁）
+    alt 唯一约束或版本冲突
+      DB --> RS : 冲突，事务回滚
+      RS --> FE : 预约失败 + 刷新提示
+    else 成功
+      RS -> LOG : 同事务写审计日志
+      RS -> DB : 事务提交
+      RS -> MSG : 事务内事件：预约成功
+      RS --> FE : 预约编号、到期时间、当前状态
+    end
+  end
+end
+
+FE --> B : 展示“待卖家确认”、到期倒计时与取消入口\n提示“预约不涉及线上付款”
+
+note over RS
+  同一请求标识重发只返回首次结果；
+  更换标识仍受“同一商品至多一条有效预约”约束。
+end note
+@enduml

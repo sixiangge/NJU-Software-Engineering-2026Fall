@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>拾集 · 逛市场</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="02-browse.html">
+    <div class="brand-mark"></div>
+    <div><div class="brand-name">拾集</div><div class="brand-sub">SECONDHAND</div></div>
+  </a>
+  <nav class="nav">
+    <a class="active" href="02-browse.html">逛市场</a>
+    <a href="05-workspace.html">我买到的</a>
+    <a href="05-workspace.html">我发布的</a>
+    <a href="09-messages.html">消息</a>
+  </nav>
+  <div class="search">
+    <svg class="icon sm" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+    <input placeholder="搜索标题或描述，例如「显示器」">
+  </div>
+  <div class="top-actions">
+    <a class="btn btn-primary btn-sm" href="04-publish.html" style="height:34px;padding:0 14px">发布闲置</a>
+    <a class="icon-btn" href="09-messages.html">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 8-3 8h18s-3-1-3-8"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+      <span class="dot"></span>
+    </a>
+    <div class="avatar">林</div>
+  </div>
+</header>
+
+<main class="page">
+  <div class="page-head">
+    <div>
+      <div class="page-title">逛市场</div>
+      <div class="page-sub">共 1,286 件在售闲置 · 默认按最近发布时间排序</div>
+    </div>
+    <div class="row small muted">
+      <svg class="icon sm" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg>
+      数据更新于 2 分钟前
+    </div>
+  </div>
+
+  <div class="browse-layout">
+    <aside class="card filter-panel">
+      <div class="filter-block">
+        <div class="filter-title">商品分类</div>
+        <div class="chip-list">
+          <a class="active" href="#">全部 <span class="count">1286</span></a>
+          <a href="#">数码电子 <span class="count">316</span></a>
+          <a href="#">图书教材 <span class="count">244</span></a>
+          <a href="#">运动户外 <span class="count">187</span></a>
+          <a href="#">家居生活 <span class="count">208</span></a>
+          <a href="#">乐器音响 <span class="count">96</span></a>
+        </div>
+      </div>
+      <div class="filter-block">
+        <div class="filter-title">价格区间</div>
+        <div class="price-range">
+          <input class="input" placeholder="最低">
+          <span class="muted">—</span>
+          <input class="input" placeholder="最高">
+        </div>
+        <div class="pills" style="margin-top:9px">
+          <span class="pill">0–100</span><span class="pill">100–500</span><span class="pill">500+</span>
+        </div>
+      </div>
+      <div class="filter-block">
+        <div class="filter-title">商品状态</div>
+        <div class="pills">
+          <span class="pill active">已发布</span><span class="pill">已预约</span><span class="pill">交易中</span><span class="pill">已售出</span>
+        </div>
+      </div>
+      <div class="filter-block">
+        <div class="filter-title">交易地点</div>
+        <select class="select" style="height:34px;font-size:12.5px">
+          <option>全部地点</option><option>仙林校区</option><option>鼓楼校区</option>
+        </select>
+      </div>
+    </aside>
+
+    <section>
+      <div class="between" style="margin-bottom:12px">
+        <div class="pills">
+          <span class="pill active">综合排序</span><span class="pill">最新发布</span><span class="pill">价格从低到高</span><span class="pill">价格从高到低</span>
+        </div>
+        <span class="small muted">1–20 / 1,286</span>
+      </div>
+
+      <div class="grid-cards">
+        <a class="item-card" href="03-detail.html">
+          <div class="photo" style="background:linear-gradient(145deg,#e7f0ef,#d3e4e0)">
+            <span class="tag badge green">已发布</span>
+            <span class="fav"><svg class="icon sm" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></span>
+            <svg viewBox="0 0 200 140">
+              <rect x="50" y="26" width="100" height="66" rx="6" fill="rgba(255,255,255,.72)" stroke="rgba(15,118,110,.55)" stroke-width="2"/>
+              <rect x="61" y="37" width="78" height="44" rx="3" fill="rgba(15,118,110,.12)"/>
+              <path d="M88 92h24l5 15H83z" fill="rgba(255,255,255,.8)" stroke="rgba(15,118,110,.45)" stroke-width="2"/>
+              <rect x="72" y="107" width="56" height="5" rx="2.5" fill="rgba(15,118,110,.35)"/>
+            </svg>
+          </div>
+          <div class="body">
+            <div class="title">戴尔 U2723QE 27 英寸 4K 显示器，箱说全</div>
+            <div class="between" style="margin-top:7px">
+              <div class="price">¥1,280<small>可小刀</small></div>
+              <span class="badge gray">95 新</span>
+            </div>
+            <div class="meta"><span>仙林校区 · 1.2km</span><span>2 小时前</span></div>
+            <div class="seller" style="margin-top:6px"><span class="avatar">周</span> 周牧之 · 信用 98</div>
+          </div>
+        </a>
+
+        <a class="item-card" href="03-detail.html">
+          <div class="photo" style="background:linear-gradient(145deg,#f3eee4,#e7dcc8)">
+            <span class="tag badge green">已发布</span>
+            <span class="fav"><svg class="icon sm" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></span>
+            <svg viewBox="0 0 200 140">
+              <circle cx="62" cy="94" r="22" fill="none" stroke="rgba(120,86,36,.55)" stroke-width="2.5"/>
+              <circle cx="140" cy="94" r="22" fill="none" stroke="rgba(120,86,36,.55)" stroke-width="2.5"/>
+              <path d="M62 94l20-32h30l14 32M82 62h34M116 62l24 32M102 42h14" fill="none" stroke="rgba(120,86,36,.75)" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="110" cy="62" r="4" fill="rgba(120,86,36,.55)"/>
+            </svg>
+          </div>
+          <div class="body">
+            <div class="title">捷安特 Escape 2 通勤公路车，M 码</div>
+            <div class="between" style="margin-top:7px">
+              <div class="price">¥980<small>自提</small></div>
+              <span class="badge gray">9 成新</span>
+            </div>
+            <div class="meta"><span>鼓楼校区 · 0.8km</span><span>5 小时前</span></div>
+            <div class="seller" style="margin-top:6px"><span class="avatar">陈</span> 陈一鸣 · 信用 95</div>
+          </div>
+        </a>
+
+        <a class="item-card" href="03-detail.html">
+          <div class="photo" style="background:linear-gradient(145deg,#e9eef7,#d7e0ef)">
+            <span class="tag badge amber">已预约</span>
+            <span class="fav"><svg class="icon sm" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></span>
+            <svg viewBox="0 0 200 140">
+              <rect x="56" y="50" width="88" height="58" rx="9" fill="rgba(255,255,255,.75)" stroke="rgba(38,74,130,.55)" stroke-width="2.5"/>
+              <circle cx="100" cy="79" r="19" fill="rgba(38,74,130,.10)" stroke="rgba(38,74,130,.6)" stroke-width="2.5"/>
+              <circle cx="100" cy="79" r="9" fill="none" stroke="rgba(38,74,130,.45)" stroke-width="2"/>
+              <rect x="86" y="36" width="28" height="13" rx="4" fill="rgba(255,255,255,.8)" stroke="rgba(38,74,130,.5)" stroke-width="2"/>
+              <circle cx="128" cy="60" r="3.5" fill="rgba(38,74,130,.55)"/>
+            </svg>
+          </div>
+          <div class="body">
+            <div class="title">富士 X-S10 微单套机 15-45mm，快门 3k</div>
+            <div class="between" style="margin-top:7px">
+              <div class="price">¥5,600<small>可小刀</small></div>
+              <span class="badge gray">95 新</span>
+            </div>
+            <div class="meta"><span>仙林校区 · 2.4km</span><span>昨天</span></div>
+            <div class="seller" style="margin-top:6px"><span class="avatar">许</span> 许知远 · 信用 99</div>
+          </div>
+        </a>
+
+        <a class="item-card" href="03-detail.html">
+          <div class="photo" style="background:linear-gradient(145deg,#eef1e6,#dde5cf)">
+            <span class="tag badge green">已发布</span>
+            <span class="fav"><svg class="icon sm" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></span>
+            <svg viewBox="0 0 200 140">
+              <path d="M54 40h42c8 0 12 4 12 10v50c0-6-4-10-12-10H54z" fill="rgba(255,255,255,.72)" stroke="rgba(76,102,40,.55)" stroke-width="2.5"/>
+              <path d="M146 40h-42c-8 0-12 4-12 10v50c0-6 4-10 12-10h42z" fill="rgba(255,255,255,.5)" stroke="rgba(76,102,40,.55)" stroke-width="2.5"/>
+              <path d="M64 56h32M64 66h26M64 76h32" stroke="rgba(76,102,40,.35)" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="body">
+            <div class="title">《算法导论》第三版 + 习题解答，少量笔记</div>
+            <div class="between" style="margin-top:7px">
+              <div class="price">¥45<small>包邮</small></div>
+              <span class="badge gray">8 成新</span>
+            </div>
+            <div class="meta"><span>仙林校区 · 0.5km</span><span>昨天</span></div>
+            <div class="seller" style="margin-top:6px"><span class="avatar">李</span> 李知遥 · 信用 92</div>
+          </div>
+        </a>
+
+        <a class="item-card" href="03-detail.html">
+          <div class="photo" style="background:linear-gradient(145deg,#f2ede7,#e3d6c8)">
+            <span class="tag badge green">已发布</span>
+            <span class="fav"><svg class="icon sm" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></span>
+            <svg viewBox="0 0 200 140">
+              <path d="M72 36v52h56V36" fill="rgba(255,255,255,.65)" stroke="rgba(110,76,44,.55)" stroke-width="2.5"/>
+              <path d="M72 74h56M82 88v22M118 88v22M84 40v30M116 40v30" stroke="rgba(110,76,44,.65)" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="body">
+            <div class="title">宜家人体工学办公椅，可调腰托</div>
+            <div class="between" style="margin-top:7px">
+              <div class="price">¥320<small>自提</small></div>
+              <span class="badge gray">9 成新</span>
+            </div>
+            <div class="meta"><span>鼓楼校区 · 1.7km</span><span>2 天前</span></div>
+            <div class="seller" style="margin-top:6px"><span class="avatar">王</span> 王砚秋 · 信用 90</div>
+          </div>
+        </a>
+
+        <a class="item-card" href="03-detail.html">
+          <div class="photo" style="background:linear-gradient(145deg,#f4eadf,#e9d5bf)">
+            <span class="tag badge green">已发布</span>
+            <span class="fav"><svg class="icon sm" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></span>
+            <svg viewBox="0 0 200 140">
+              <path d="M78 32h44l16 38H62z" fill="rgba(255,255,255,.7)" stroke="rgba(126,82,38,.55)" stroke-width="2.5"/>
+              <path d="M100 70v38M78 114h44" stroke="rgba(126,82,38,.65)" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M82 44h36" stroke="rgba(126,82,38,.3)" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="body">
+            <div class="title">小米台灯 Pro，护眼无频闪，带原装电源</div>
+            <div class="between" style="margin-top:7px">
+              <div class="price">¥79</div>
+              <span class="badge gray">95 新</span>
+            </div>
+            <div class="meta"><span>仙林校区 · 0.9km</span><span>3 天前</span></div>
+            <div class="seller" style="margin-top:6px"><span class="avatar">赵</span> 赵一苇 · 信用 96</div>
+          </div>
+        </a>
+
+        <a class="item-card" href="03-detail.html">
+          <div class="photo" style="background:linear-gradient(145deg,#e7f0f1,#d2e2e4)">
+            <span class="tag badge green">已发布</span>
+            <span class="fav"><svg class="icon sm" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></span>
+            <svg viewBox="0 0 200 140">
+              <rect x="48" y="58" width="104" height="40" rx="5" fill="rgba(255,255,255,.75)" stroke="rgba(30,92,100,.55)" stroke-width="2.5"/>
+              <path d="M58 68h12M76 68h12M94 68h12M112 68h12M130 68h8M58 78h12M76 78h12M94 78h12M112 78h12M130 78h8M70 88h60" stroke="rgba(30,92,100,.5)" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="body">
+            <div class="title">Keychron K3 矮轴机械键盘，茶轴</div>
+            <div class="between" style="margin-top:7px">
+              <div class="price">¥260<small>可小刀</small></div>
+              <span class="badge gray">9 成新</span>
+            </div>
+            <div class="meta"><span>仙林校区 · 1.5km</span><span>3 天前</span></div>
+            <div class="seller" style="margin-top:6px"><span class="avatar">孙</span> 孙泊舟 · 信用 94</div>
+          </div>
+        </a>
+
+        <a class="item-card" href="03-detail.html">
+          <div class="photo" style="background:linear-gradient(145deg,#f1ece9,#e2d4ce)">
+            <span class="tag badge green">已发布</span>
+            <span class="fav"><svg class="icon sm" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8z"/></svg></span>
+            <svg viewBox="0 0 200 140">
+              <path d="M112 34l14 14-24 24c9 10 7 23-4 31-12 9-29 6-36-6-7-12-2-27 11-33 7-3 12-3 16-1z" fill="rgba(255,255,255,.65)" stroke="rgba(120,74,66,.55)" stroke-width="2.5"/>
+              <circle cx="95" cy="97" r="13" fill="none" stroke="rgba(120,74,66,.5)" stroke-width="2.5"/>
+              <path d="M126 48l24 24M114 40l10-10 34 34-10 10" stroke="rgba(120,74,66,.7)" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="body">
+            <div class="title">雅马哈 F310 民谣吉他，41 寸，送琴包</div>
+            <div class="between" style="margin-top:7px">
+              <div class="price">¥480<small>自提</small></div>
+              <span class="badge gray">8 成新</span>
+            </div>
+            <div class="meta"><span>鼓楼校区 · 2.1km</span><span>4 天前</span></div>
+            <div class="seller" style="margin-top:6px"><span class="avatar">周</span> 周予安 · 信用 91</div>
+          </div>
+        </a>
+      </div>
+
+      <div class="pager">
+        <a href="#">上一页</a><a class="active" href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">…</a><a href="#">65</a><a href="#">下一页</a>
+      </div>
+    </section>
+  </div>
+</main>
+</body>
+</html>

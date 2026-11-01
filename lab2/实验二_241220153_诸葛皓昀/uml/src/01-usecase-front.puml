@@ -1,0 +1,72 @@
+﻿@startuml 01-usecase-front
+' 二手交易系统 —— 前台用例图（行为性图）
+left to right direction
+skinparam backgroundColor #FFFFFF
+skinparam dpi 150
+skinparam defaultFontName "Microsoft YaHei"
+skinparam defaultFontSize 12
+skinparam shadowing false
+skinparam ArrowColor #4A6573
+skinparam ArrowFontSize 10
+skinparam usecase {
+  BackgroundColor #F4F8FA
+  BorderColor #236B83
+  FontColor #18334B
+  FontSize 11
+}
+skinparam rectangle {
+  BackgroundColor #FFFFFF
+  BorderColor #9DB4C0
+  FontColor #18334B
+  FontSize 12
+}
+skinparam actor {
+  BackgroundColor #FFFFFF
+  BorderColor #236B83
+  FontColor #18334B
+}
+
+actor 游客 as Guest
+actor 普通用户 as User
+actor 买家 as Buyer
+actor 卖家 as Seller
+
+User <|-- Buyer
+User <|-- Seller
+
+rectangle "前台交易（M1～M4、M6、M8）" {
+  usecase "注册 / 登录" as UC_Login
+  usecase "查询商品" as UC_Search
+  usecase "发布与管理商品" as UC_Manage
+  usecase "预约商品" as UC_Reserve
+  usecase "取消预约" as UC_Cancel
+  usecase "确认 / 拒绝预约" as UC_Confirm
+  usecase "完成交易" as UC_Complete
+  usecase "提交解除确认" as UC_Release
+  usecase "查看我的交易与消息" as UC_MyDeal
+  usecase "查看本人统计" as UC_Stat
+}
+
+Guest --> UC_Login
+Guest --> UC_Search
+
+User --> UC_Login
+User --> UC_Search
+User --> UC_MyDeal
+
+Buyer --> UC_Reserve
+Buyer --> UC_Cancel
+Buyer --> UC_Complete
+Buyer --> UC_Release
+
+Seller --> UC_Manage
+Seller --> UC_Confirm
+Seller --> UC_Release
+Seller --> UC_Stat
+
+note right of UC_Reserve
+  服务端校验角色、归属、
+  最新状态与版本；同一商品
+  至多一条有效预约。
+end note
+@enduml

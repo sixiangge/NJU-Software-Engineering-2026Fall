@@ -1,0 +1,63 @@
+@startuml 03-activity-review
+' 二手交易系统 —— 商品送审与审核活动图（行为性图）
+skinparam backgroundColor #FFFFFF
+skinparam dpi 150
+skinparam defaultFontName "Microsoft YaHei"
+skinparam defaultFontSize 12
+skinparam shadowing false
+skinparam ArrowColor #4A6573
+skinparam ArrowFontSize 10
+skinparam swimlane {
+  BorderColor #9DB4C0
+  TitleBackgroundColor #E3EEF2
+  TitleFontColor #18334B
+  BackgroundColor #FFFFFF
+  FontColor #18334B
+}
+skinparam activity {
+  BackgroundColor #F4F8FA
+  BorderColor #4A6573
+  FontColor #18334B
+  FontSize 11
+  DiamondBackgroundColor #FFF8E6
+  DiamondBorderColor #D9B45B
+}
+
+|卖家|
+start
+:编辑商品资料\n标题、描述、分类、价格、成色、交易地点;
+:保存草稿（允许缺项）;
+|系统|
+:校验已填写的价格、图片与分类;
+|卖家|
+:上传 1 ～ 9 张图片;
+:提交审核;
+|系统|
+:送审校验\n必填项 · 图片数量与真实格式\n价格精度 · 分类启用;
+if (校验通过?) then (否)
+  :返回具体字段错误;
+  |卖家|
+  :保留表单与已上传图片并修改;
+  stop
+else (是)
+  |系统|
+  :商品状态 = 待审核\n锁定送审版本;
+  |管理员|
+  :打开待审核商品\n核对内容与图片;
+  if (审核通过?) then (否)
+    :填写驳回原因（必填）;
+    |系统|
+    :商品状态 = 审核驳回\n记录审核人、版本、原因;
+    |卖家|
+    :查看驳回原因;
+    stop
+  else (是)
+    |系统|
+    :商品状态 = 已发布\n记录审核人、版本、时间;
+    :写审计日志;
+    |买家|
+    :在公开列表查询并预约;
+    stop
+  endif
+endif
+@enduml

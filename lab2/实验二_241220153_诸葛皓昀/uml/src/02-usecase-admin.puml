@@ -1,0 +1,57 @@
+﻿@startuml 02-usecase-admin
+' 二手交易系统 —— 后台用例图（行为性图）
+left to right direction
+skinparam backgroundColor #FFFFFF
+skinparam dpi 150
+skinparam defaultFontName "Microsoft YaHei"
+skinparam defaultFontSize 12
+skinparam shadowing false
+skinparam ArrowColor #4A6573
+skinparam ArrowFontSize 10
+skinparam usecase {
+  BackgroundColor #F4F8FA
+  BorderColor #236B83
+  FontColor #18334B
+  FontSize 11
+}
+skinparam rectangle {
+  BackgroundColor #FFFFFF
+  BorderColor #9DB4C0
+  FontColor #18334B
+  FontSize 12
+}
+skinparam actor {
+  BackgroundColor #FFFFFF
+  BorderColor #236B83
+  FontColor #18334B
+}
+
+actor 管理员 as Admin
+actor "到期任务\n（系统）" as Scheduler
+
+rectangle "后台治理（M1、M4、M5、M7、M9）" {
+  usecase "凭邀请码注册管理员" as UC_InviteReg
+  usecase "封禁账号" as UC_Ban
+  usecase "审核商品" as UC_Review
+  usecase "违规下架" as UC_Violate
+  usecase "审批整改恢复" as UC_Restore
+  usecase "异常关闭预约" as UC_Close
+  usecase "维护商品分类" as UC_Category
+  usecase "管理邀请码" as UC_Invite
+  usecase "查看全站统计" as UC_Stat
+  usecase "查询审计日志" as UC_Audit
+}
+
+Admin --> UC_InviteReg
+Admin --> UC_Ban
+Admin --> UC_Review
+Admin --> UC_Violate
+Admin --> UC_Restore
+Admin --> UC_Category
+Admin --> UC_Invite
+Admin --> UC_Stat
+Admin --> UC_Audit
+
+Scheduler --> UC_Close
+UC_Violate ..> UC_Close : <<include>>\n[存在有效预约]
+@enduml

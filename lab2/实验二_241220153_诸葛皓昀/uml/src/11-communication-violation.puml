@@ -1,0 +1,45 @@
+@startuml 11-communication-violation
+' 二手交易系统 —— 违规下架协作通信图（交互性图）
+skinparam backgroundColor #FFFFFF
+skinparam dpi 150
+skinparam defaultFontName "Microsoft YaHei"
+skinparam defaultFontSize 12
+skinparam shadowing false
+skinparam ArrowColor #4A6573
+skinparam ArrowFontSize 10
+skinparam object {
+  BackgroundColor #F4F8FA
+  BorderColor #4A6573
+  FontColor #18334B
+  FontSize 11
+}
+skinparam note {
+  BackgroundColor #FFF8E6
+  BorderColor #D9B45B
+  FontSize 10
+}
+
+object "管理员界面 :AdminUI" as UI
+object ":AccessControl" as ACC
+object ":ModerationService" as MOD
+object "商品 :Item" as ITEM
+object "预约 :Reservation" as RES
+object ":AuditService" as LOG
+object ":NotificationService" as MSG
+
+UI --> MOD : 1. 提交违规下架\n(itemId, reason, requestId)
+MOD --> ACC : 1.1 校验管理员权限与请求标识
+ACC --> MOD : 1.2 允许处理
+MOD --> ITEM : 2. 置为“违规下架”\n记录原因、处理人与时间
+MOD --> RES : 3. 若存在有效预约：\n置为“异常关闭”
+MOD --> LOG : 4. 同事务写审计日志
+MOD --> MSG : 5. 通知买卖双方
+MOD --> UI : 6. 返回处理结果与影响范围
+
+note right of MOD
+  步骤 2～4 在同一事务中完成：
+  商品、预约、处理记录与日志
+  要么全部成功，要么全部回滚；
+  通知失败不回滚业务。
+end note
+@enduml

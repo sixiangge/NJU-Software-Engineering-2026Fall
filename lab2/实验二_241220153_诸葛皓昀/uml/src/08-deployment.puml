@@ -1,0 +1,73 @@
+﻿@startuml 08-deployment
+' 二手交易系统 —— 部署图（结构性图）
+top to bottom direction
+skinparam backgroundColor #FFFFFF
+skinparam dpi 150
+skinparam defaultFontName "Microsoft YaHei"
+skinparam defaultFontSize 12
+skinparam shadowing false
+skinparam ArrowColor #4A6573
+skinparam ArrowFontSize 10
+skinparam node {
+  BackgroundColor #F4F8FA
+  BorderColor #4A6573
+  FontColor #18334B
+  FontSize 12
+}
+skinparam database {
+  BackgroundColor #EAF2F5
+  BorderColor #4A6573
+}
+skinparam artifact {
+  BackgroundColor #FFFFFF
+  BorderColor #9DB4C0
+  FontColor #18334B
+  FontSize 11
+}
+skinparam note {
+  BackgroundColor #FFF8E6
+  BorderColor #D9B45B
+  FontSize 10
+}
+
+node "用户设备\n（手机 375px / 电脑 1366px）" <<device>> as Client {
+  node "浏览器" <<executionEnvironment>> as Browser {
+    artifact "Web 前端\n响应式页面" as FE
+  }
+}
+
+node "应用服务器" <<device>> as AppServer {
+  node "Web 应用进程" <<executionEnvironment>> as App {
+    artifact "模块化单体应用\nM1 ～ M9" as APP
+  }
+  node "任务进程" <<executionEnvironment>> as Worker {
+    artifact "到期释放任务\n每分钟扫描" as JOB
+  }
+  node "本地文件目录" <<executionEnvironment>> as FileStore {
+    artifact "商品图片\nJPEG / PNG" as IMG
+  }
+}
+
+node "数据库服务器" <<device>> as DBServer {
+  database "关系数据库 MySQL 8.0\n业务 · 请求记录 · 审计" as DB
+}
+
+node "备份存储" <<device>> as BackupServer {
+  artifact "每日备份\n至少保留 7 份" as BAK
+}
+
+FE --> APP : HTTPS / JSON
+APP --> DB : 事务读写
+JOB --> DB : 扫描到期预约
+APP --> IMG : 上传 / 读取
+DB --> BAK : 每日备份
+BAK ..> DB : 30 分钟内恢复
+
+note right of AppServer
+  实验规模下单机部署：
+  1 万条商品、20 并发会话；
+  应用与任务进程共享数据库，
+  以数据库事务保证预约、商品、
+  处理记录与日志的完整一致。
+end note
+@enduml

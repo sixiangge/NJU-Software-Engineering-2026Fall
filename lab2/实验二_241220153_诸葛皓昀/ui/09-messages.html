@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>拾集 · 消息中心</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="02-browse.html">
+    <div class="brand-mark"></div>
+    <div><div class="brand-name">拾集</div><div class="brand-sub">SECONDHAND</div></div>
+  </a>
+  <nav class="nav">
+    <a href="02-browse.html">逛市场</a>
+    <a href="05-workspace.html">我买到的</a>
+    <a href="05-workspace.html">我发布的</a>
+    <a class="active" href="09-messages.html">消息</a>
+  </nav>
+  <div class="search">
+    <svg class="icon sm" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+    <input placeholder="搜索标题或描述">
+  </div>
+  <div class="top-actions">
+    <a class="btn btn-primary btn-sm" href="04-publish.html" style="height:34px;padding:0 14px">发布闲置</a>
+    <a class="icon-btn" href="09-messages.html">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 8-3 8h18s-3-1-3-8"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+      <span class="dot"></span>
+    </a>
+    <div class="avatar">林</div>
+  </div>
+</header>
+
+<main class="page">
+  <div class="page-head">
+    <div>
+      <div class="page-title">消息中心</div>
+      <div class="page-sub">仅站内消息，不接入短信、邮件或微信通知</div>
+    </div>
+    <div class="pills">
+      <span class="pill active">全部 12</span><span class="pill">预约 7</span><span class="pill">交易 3</span><span class="pill">违规 2</span>
+    </div>
+  </div>
+
+  <div class="msg-layout">
+    <section class="card msg-list">
+      <div class="msg-item active">
+        <div class="ico"><svg class="icon sm" viewBox="0 0 24 24"><path d="M8 2v4M16 2v4"/><rect x="3" y="4" width="18" height="17" rx="3"/><path d="M3 10h18"/></svg></div>
+        <div style="flex:1">
+          <div class="t">预约成功，等待卖家确认 <span style="width:6px;height:6px;border-radius:50%;background:#d9534f;display:inline-block"></span></div>
+          <div class="d">戴尔 U2723QE 显示器 · 请在 24 小时内等待卖家确认</div>
+        </div>
+        <div class="time">15:02</div>
+      </div>
+
+      <div class="msg-item">
+        <div class="ico" style="background:var(--blue-soft);color:var(--blue)"><svg class="icon sm" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div>
+        <div style="flex:1">
+          <div class="t">卖家已确认你的预约 <span style="width:6px;height:6px;border-radius:50%;background:#d9534f;display:inline-block"></span></div>
+          <div class="d">富士 X-S10 微单套机 · 请与卖家商定线下交付</div>
+        </div>
+        <div class="time">昨天</div>
+      </div>
+
+      <div class="msg-item">
+        <div class="ico" style="background:#f0f3f4;color:var(--muted)"><svg class="icon sm" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9 9l6 6M15 9l-6 6"/></svg></div>
+        <div style="flex:1">
+          <div class="t">预约已取消</div>
+          <div class="d">雅马哈 F310 民谣吉他 · 商品已恢复为“已发布”</div>
+        </div>
+        <div class="time">10-30</div>
+      </div>
+
+      <div class="msg-item">
+        <div class="ico" style="background:var(--red-soft);color:var(--red)"><svg class="icon sm" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v5M12 16h.01"/></svg></div>
+        <div style="flex:1">
+          <div class="t">商品因违规被关闭</div>
+          <div class="d">某商品 · 关联预约已异常关闭，联系方式已撤销</div>
+        </div>
+        <div class="time">10-28</div>
+      </div>
+
+      <div class="msg-item">
+        <div class="ico" style="background:var(--green-soft);color:var(--green)"><svg class="icon sm" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg></div>
+        <div style="flex:1">
+          <div class="t">商品审核通过</div>
+          <div class="d">小米台灯 Pro · 已发布到公开列表</div>
+        </div>
+        <div class="time">10-20</div>
+      </div>
+
+      <div class="msg-item">
+        <div class="ico" style="background:var(--amber-soft);color:var(--amber)"><svg class="icon sm" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div>
+        <div style="flex:1">
+          <div class="t">预约即将到期</div>
+          <div class="d">某预约 · 卖家尚未确认，到期后将自动释放</div>
+        </div>
+        <div class="time">10-19</div>
+      </div>
+    </section>
+
+    <section class="card msg-detail">
+      <div class="between">
+        <span class="badge teal">预约通知</span>
+        <span class="small muted">2026-10-31 15:02:06</span>
+      </div>
+      <h2 style="margin-top:12px">预约成功，等待卖家确认</h2>
+      <div class="small muted">来自 拾集 · 关联业务事件 EV-20261031-0086</div>
+
+      <div class="prose" style="margin-top:18px">
+        你已成功预约「戴尔 U2723QE 27 英寸 4K 显示器，箱说全」，当前状态为
+        <b style="color:var(--amber)">待卖家确认</b>。卖家须在 2026-11-01 15:02 前确认，
+        逾期未确认将自动释放商品，预约记为“已超时”。
+      </div>
+
+      <div class="card" style="margin-top:18px;box-shadow:none;background:#fbfdfd">
+        <div class="card-body" style="padding:15px 16px">
+          <div class="between">
+            <div>
+              <div class="tiny muted">预约编号</div>
+              <div class="mono" style="font-size:14px;font-weight:700">R20261031-0086</div>
+            </div>
+            <span class="badge amber">待卖家确认</span>
+          </div>
+          <div class="divider" style="margin:12px 0"></div>
+          <div class="row" style="justify-content:space-between">
+            <span class="small muted">商品标价快照</span>
+            <span style="font-weight:700;color:var(--red)">¥1,280.00</span>
+          </div>
+          <div class="row" style="justify-content:space-between;margin-top:8px">
+            <span class="small muted">剩余确认时间</span>
+            <span class="mono" style="font-weight:700">21:36:18</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="notice" style="margin-top:16px">
+        <svg class="icon sm" viewBox="0 0 24 24" style="flex:0 0 15px"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>
+        预约不代表付款。付款、见面与交付由双方线下协商；同一业务事件对同一接收者只保留一条消息。
+      </div>
+
+      <div class="row" style="margin-top:18px">
+        <a class="btn btn-primary" href="05-workspace.html">查看预约</a>
+        <a class="btn btn-ghost" href="03-detail.html">查看商品</a>
+      </div>
+    </section>
+  </div>
+</main>
+</body>
+</html>

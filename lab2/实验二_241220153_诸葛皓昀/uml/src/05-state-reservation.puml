@@ -1,0 +1,62 @@
+﻿@startuml 05-state-reservation
+' 二手交易系统 —— 预约状态机（行为性图）
+top to bottom direction
+skinparam backgroundColor #FFFFFF
+skinparam dpi 150
+skinparam defaultFontName "Microsoft YaHei"
+skinparam defaultFontSize 12
+skinparam shadowing false
+skinparam ArrowColor #4A6573
+skinparam ArrowFontSize 10
+skinparam state {
+  BackgroundColor #F4F8FA
+  BorderColor #4A6573
+  FontColor #18334B
+  FontSize 12
+}
+skinparam note {
+  BackgroundColor #FFF8E6
+  BorderColor #D9B45B
+  FontSize 10
+}
+
+state "待卖家确认" as Pending
+state "已确认" as Confirmed
+
+state "终态（不可复活）" as Terminal {
+  state "已取消" as Cancelled
+  state "已拒绝" as Rejected
+  state "已超时" as Expired
+  state "已完成" as Completed
+  state "异常关闭" as Closed
+}
+
+[*] --> Pending : 预约成功\n[占用商品 · 保存快照 · 24 小时到期]
+Pending --> Cancelled : 本笔买家取消
+Pending --> Rejected : 所属卖家拒绝\n[填写原因]
+Pending --> Expired : 到期释放\n[now ≥ expiresAt，60 秒内]
+Pending --> Confirmed : 卖家确认\n[now < expiresAt]
+Pending --> Closed : 违规处理\n[管理员填写原因]
+Confirmed --> Completed : 本笔买家确认完成\n[提示已收到物品]
+Confirmed --> Closed : 协商解除\n[双方提交确认 + 管理员核对]
+Confirmed --> Closed : 违规处理
+
+Cancelled --> [*]
+Rejected --> [*]
+Expired --> [*]
+Completed --> [*]
+Closed --> [*]
+
+note right of Pending
+  新建预约不排队、不收集候选意向；
+  服务端以成功占用的先后为准，
+  仅生成一条“待卖家确认”记录。
+end note
+
+note bottom of Terminal
+  终态记录保留原编号与时间，不得恢复有效；
+  重放旧请求只返回原结果，不影响后来新建的预约；
+  预约关闭时同步释放或关闭对应商品状态，
+  并撤销该笔交易的联系方式访问权限。
+end note
+@enduml

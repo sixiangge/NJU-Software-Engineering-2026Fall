@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>拾集管理后台 · 基础数据</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="admin">
+  <aside class="side">
+    <div class="brand">
+      <div class="brand-mark"></div>
+      <div><div class="brand-name" style="font-size:17px">拾集</div><div class="brand-sub">ADMIN CONSOLE</div></div>
+    </div>
+    <div class="group">交易治理</div>
+    <a href="06-admin-review.html">
+      <svg class="icon sm" viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+      商品审核
+    </a>
+    <a href="07-admin-violation.html">
+      <svg class="icon sm" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v5M12 16h.01"/></svg>
+      违规处理
+    </a>
+    <div class="group">基础数据</div>
+    <a class="active" href="11-admin-base.html">
+      <svg class="icon sm" viewBox="0 0 24 24"><path d="M20 12l-8 8-9-9V4h7z"/><circle cx="7.5" cy="7.5" r="1.2"/></svg>
+      分类与邀请码
+    </a>
+    <a href="11-admin-base.html">
+      <svg class="icon sm" viewBox="0 0 24 24"><circle cx="9" cy="8" r="4"/><path d="M2 21v-2a5 5 0 0 1 5-5h4"/><path d="M17 8l5 5M22 8l-5 5"/></svg>
+      账号封禁
+    </a>
+    <div class="group">分析与追溯</div>
+    <a href="08-stats.html">
+      <svg class="icon sm" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15v3M12 9v9M17 6v12"/></svg>
+      统计报表
+    </a>
+    <a href="10-audit.html">
+      <svg class="icon sm" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h6"/></svg>
+      审计日志
+    </a>
+    <div class="foot">管理员账号不参与买卖<br>界面不可修改或删除日志</div>
+  </aside>
+
+  <div class="admin-main">
+    <div class="admin-top">
+      <div class="row"><div class="title">基础数据</div><span class="badge teal">分类 · 邀请码 · 账号</span></div>
+      <div class="row"><span class="small muted">管理员 · 周明</span><div class="avatar">周</div></div>
+    </div>
+
+    <div class="admin-page">
+      <div class="base-grid">
+        <div class="card">
+          <div class="card-head">
+            <div class="card-title">商品分类</div>
+            <button class="btn btn-soft btn-sm">新增分类</button>
+          </div>
+          <table class="table">
+            <thead><tr><th>分类名称</th><th>已引用商品</th><th>状态</th><th style="text-align:right">操作</th></tr></thead>
+            <tbody>
+              <tr><td>数码电子</td><td class="num">316</td><td><span class="badge green">启用</span></td><td style="text-align:right"><span class="toggle"></span></td></tr>
+              <tr><td>图书教材</td><td class="num">244</td><td><span class="badge green">启用</span></td><td style="text-align:right"><span class="toggle"></span></td></tr>
+              <tr><td>运动户外</td><td class="num">187</td><td><span class="badge green">启用</span></td><td style="text-align:right"><span class="toggle"></span></td></tr>
+              <tr><td>家居生活</td><td class="num">208</td><td><span class="badge green">启用</span></td><td style="text-align:right"><span class="toggle"></span></td></tr>
+              <tr><td>乐器音响</td><td class="num">96</td><td><span class="badge gray">停用</span></td><td style="text-align:right"><span class="toggle off"></span></td></tr>
+            </tbody>
+          </table>
+          <div style="padding:12px 16px;border-top:1px solid var(--line-2)" class="tiny muted">
+            分类名称唯一；已被商品引用的分类不可删除，停用后不影响历史商品的分类关系，但不再用于新提交。
+          </div>
+        </div>
+
+        <div class="stack">
+          <div class="card">
+            <div class="card-head">
+              <div class="card-title">管理员邀请码</div>
+              <button class="btn btn-soft btn-sm">创建邀请码</button>
+            </div>
+            <div class="card-body" style="padding-top:10px">
+              <div class="row" style="justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line-2)">
+                <div>
+                  <div class="mono" style="font-weight:700;font-size:13px">INV-9F2C-7A41</div>
+                  <div class="tiny muted">创建者 周明 · 2026-10-31 09:12 创建</div>
+                </div>
+                <div style="text-align:right">
+                  <div class="badge amber">剩余 23:12:45</div>
+                  <div class="tiny" style="margin-top:5px"><a class="link danger" href="#">撤销</a></div>
+                </div>
+              </div>
+              <div class="row" style="justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--line-2)">
+                <div>
+                  <div class="mono" style="font-weight:700;font-size:13px">INV-3B8D-1E60</div>
+                  <div class="tiny muted">已被 陈汐 使用 · 2026-10-28 16:40</div>
+                </div>
+                <span class="badge gray">已使用</span>
+              </div>
+              <div class="row" style="justify-content:space-between;padding:10px 0">
+                <div>
+                  <div class="mono" style="font-weight:700;font-size:13px">INV-51AA-0C93</div>
+                  <div class="tiny muted">创建者 周明 · 2026-10-27 10:05 创建</div>
+                </div>
+                <span class="badge gray">已撤销</span>
+              </div>
+            </div>
+            <div style="padding:10px 16px;border-top:1px solid var(--line-2)" class="tiny muted">
+              邀请码有效期 24 小时、只能成功使用一次；注册成功与邀请码消耗在同一事务中完成。
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-head"><div class="card-title">账号封禁</div><span class="tiny muted">封禁立即使现有会话失效</span></div>
+            <div class="card-body" style="padding-top:12px">
+              <div class="row" style="margin-bottom:10px">
+                <input class="input" style="height:34px" placeholder="用户名 / 昵称 / 用户编号">
+                <button class="btn btn-ghost btn-sm" style="height:34px">查找</button>
+              </div>
+              <div class="row" style="justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--line-2)">
+                <div>
+                  <div style="font-size:12.5px;font-weight:600">shen_yi <span class="tiny muted">沈屹 · U-000318</span></div>
+                  <div class="tiny muted">在售 4 件 · 进行中预约 1 笔</div>
+                </div>
+                <button class="btn btn-ghost btn-sm">封禁</button>
+              </div>
+              <div class="row" style="justify-content:space-between;padding:8px 0">
+                <div>
+                  <div style="font-size:12.5px;font-weight:600">mo_lin <span class="tiny muted">莫林 · U-000274</span></div>
+                  <div class="tiny muted">2026-10-29 封禁 · 历史商品与预约保留</div>
+                </div>
+                <span class="badge red">已封禁</span>
+              </div>
+              <div class="tiny muted" style="margin-top:8px">封禁不自动取消、完成或清除交易，也不替代违规下架与协商解除。</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

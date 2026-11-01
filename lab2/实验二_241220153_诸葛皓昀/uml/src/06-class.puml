@@ -1,0 +1,113 @@
+@startuml 06-class
+' 类图核心版测试
+left to right direction
+skinparam backgroundColor #FFFFFF
+skinparam dpi 150
+skinparam defaultFontName "Microsoft YaHei"
+skinparam defaultFontSize 13
+skinparam shadowing false
+skinparam classAttributeIconSize 0
+skinparam nodesep 34
+skinparam ranksep 55
+skinparam ArrowColor #4A6573
+skinparam class {
+  BackgroundColor #F7FAFB
+  BorderColor #4A6573
+  HeaderBackgroundColor #E3EEF2
+  FontColor #18334B
+  FontSize 13
+  AttributeFontSize 12
+}
+hide empty members
+
+package "账号" {
+  class User {
+    - userId: Long
+    - normalizedUsername: String
+    - passwordHash: String
+    - nickname: String
+    - role: Role
+    - status: AccountStatus
+    + isBanned(): boolean
+  }
+  class AdminInvite {
+    - inviteId: Long
+    - codeHash: String
+    - creatorId: Long
+    - expiresAt: Instant
+    - usedBy: Long
+    + isUsable(now: Instant): boolean
+  }
+}
+
+package "商品" {
+  class Category {
+    - categoryId: Long
+    - name: String
+    - enabled: boolean
+  }
+  class Item {
+    - itemId: Long
+    - sellerId: Long
+    - categoryId: Long
+    - title: String
+    - price: BigDecimal
+    - status: ItemStatus
+    - version: long
+    + submit(version: long)
+    + approve(reviewerId: Long, version: long)
+    + takeDown()
+    + markViolation(reason: String)
+  }
+  class ItemImage {
+    - imageId: Long
+    - path: String
+    - mimeType: String
+    - sortNo: int
+  }
+  class ItemReview {
+    - reviewId: Long
+    - reviewerId: Long
+    - reviewedVersion: long
+    - action: String
+    - reason: String
+    - reviewedAt: Instant
+  }
+}
+
+package "交易" {
+  class Reservation {
+    - reservationId: Long
+    - itemId: Long
+    - buyerId: Long
+    - status: ReservationStatus
+    - expiresAt: Instant
+    - completedAt: Instant
+    - priceSnapshot: BigDecimal
+    + isExpired(now: Instant): boolean
+    + confirm(now: Instant)
+    + complete(now: Instant)
+    + cancel(reason: String)
+    + expire(now: Instant)
+    + close(reason: String)
+  }
+  class ReleaseConfirmation {
+    - confirmId: Long
+    - reservationId: Long
+    - submitterId: Long
+    - submittedAt: Instant
+  }
+}
+
+User "1" -- "0..*" Item : 发布
+Category "1" -- "0..*" Item : 归类
+Item "1" *-- "1..9" ItemImage : 包含
+Item "1" -- "0..*" ItemReview : 审核记录
+User "1" -- "0..*" ItemReview : 审核人
+Item "1" -- "0..*" Reservation : 历史预约
+User "1" -- "0..*" Reservation : 买家
+Reservation "1" *-- "0..2" ReleaseConfirmation : 双方确认
+User "1" -- "0..*" ReleaseConfirmation : 提交人
+User "1" -- "0..*" AdminInvite : 创建
+User "0..1" -- "0..*" AdminInvite : 使用者
+@enduml

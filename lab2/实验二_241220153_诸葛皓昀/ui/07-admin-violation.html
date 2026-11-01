@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>拾集管理后台 · 违规处理</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="admin">
+  <aside class="side">
+    <div class="brand">
+      <div class="brand-mark"></div>
+      <div><div class="brand-name" style="font-size:17px">拾集</div><div class="brand-sub">ADMIN CONSOLE</div></div>
+    </div>
+    <div class="group">交易治理</div>
+    <a href="06-admin-review.html">
+      <svg class="icon sm" viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+      商品审核
+    </a>
+    <a class="active" href="07-admin-violation.html">
+      <svg class="icon sm" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v5M12 16h.01"/></svg>
+      违规处理
+    </a>
+    <div class="group">基础数据</div>
+    <a href="11-admin-base.html">
+      <svg class="icon sm" viewBox="0 0 24 24"><path d="M20 12l-8 8-9-9V4h7z"/><circle cx="7.5" cy="7.5" r="1.2"/></svg>
+      分类与邀请码
+    </a>
+    <a href="11-admin-base.html">
+      <svg class="icon sm" viewBox="0 0 24 24"><circle cx="9" cy="8" r="4"/><path d="M2 21v-2a5 5 0 0 1 5-5h4"/><path d="M17 8l5 5M22 8l-5 5"/></svg>
+      账号封禁
+    </a>
+    <div class="group">分析与追溯</div>
+    <a href="08-stats.html">
+      <svg class="icon sm" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15v3M12 9v9M17 6v12"/></svg>
+      统计报表
+    </a>
+    <a href="10-audit.html">
+      <svg class="icon sm" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h6"/></svg>
+      审计日志
+    </a>
+    <div class="foot">管理员账号不参与买卖<br>界面不可修改或删除日志</div>
+  </aside>
+
+  <div class="admin-main">
+    <div class="admin-top">
+      <div class="row"><div class="title">违规处理</div><span class="badge red">影响 1 笔有效预约</span></div>
+      <div class="row"><span class="small muted">管理员 · 周明</span><div class="avatar">周</div></div>
+    </div>
+
+    <div class="admin-page">
+      <div class="card" style="padding:14px 18px;display:flex;align-items:center;gap:14px">
+        <div class="photo" style="width:58px;height:58px;border-radius:9px;background:linear-gradient(145deg,#e9eef7,#d7e0ef)">
+          <svg viewBox="0 0 120 120"><rect x="28" y="36" width="64" height="42" rx="7" fill="rgba(255,255,255,.7)" stroke="rgba(38,74,130,.5)" stroke-width="2"/><circle cx="60" cy="57" r="14" fill="none" stroke="rgba(38,74,130,.5)" stroke-width="2"/><rect x="48" y="26" width="24" height="10" rx="3" fill="rgba(255,255,255,.8)" stroke="rgba(38,74,130,.4)" stroke-width="2"/></svg>
+        </div>
+        <div style="flex:1">
+          <div style="font-size:15px;font-weight:700">富士 X-S10 微单套机 15-45mm，快门 3k</div>
+          <div class="small muted" style="margin-top:3px">商品编号 I-20261030-0142 · 卖家 许知远 · ¥5,600 · 发布于 2026-10-30 09:12</div>
+        </div>
+        <div class="row">
+          <span class="badge amber">已预约</span>
+          <span class="badge gray">信用 99</span>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1.25fr .75fr;gap:16px;margin-top:16px;align-items:start">
+        <div class="stack">
+          <div class="impact">
+            <div class="t">
+              <svg class="icon sm" viewBox="0 0 24 24"><path d="M10.3 3.9L1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/><path d="M12 9v4M12 17h.01"/></svg>
+              该操作将同步影响 1 笔有效预约
+            </div>
+            <ul>
+              <li>预约 R20261030-0086（买家 林夏，状态：待卖家确认）将置为“异常关闭”，原因与本次违规一致。</li>
+              <li>商品与预约的联系方式访问权限立即撤销；公开列表与原链接均不可继续交易。</li>
+              <li>买卖双方将收到关联业务结果的站内消息，通知失败不回滚本次处理。</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <div class="card-head"><div class="card-title">处理信息</div><span class="tiny muted">商品、预约、处理记录与日志在同一事务中提交</span></div>
+            <div class="card-body">
+              <div class="field" style="margin-bottom:14px">
+                <label>违规类型</label>
+                <div class="pills">
+                  <span class="pill active">描述与实物不符</span><span class="pill">违禁物品</span><span class="pill">价格欺诈</span><span class="pill">其他</span>
+                </div>
+              </div>
+              <div class="field">
+                <label>处理原因 <span class="tiny muted" style="font-weight:400">（必填，卖家可见）</span></label>
+                <textarea class="textarea" style="min-height:74px">买家反馈收到商品与描述中的快门次数、成色不一致，且卖家拒绝提供原始购买凭证。经核对聊天与图片，判定为描述与实物不符。</textarea>
+                <div class="between"><span class="hint">原因将写入审计日志，并在商品与预约记录中保留</span><span class="hint">68 / 200</span></div>
+              </div>
+              <div class="divider"></div>
+              <div class="small" style="display:flex;flex-direction:column;gap:8px">
+                <label class="row" style="gap:8px"><input type="checkbox" checked disabled> 同步关闭有效预约并记录同一原因</label>
+                <label class="row" style="gap:8px"><input type="checkbox" checked disabled> 撤销该笔交易的联系方式访问权限</label>
+                <label class="row" style="gap:8px"><input type="checkbox" checked disabled> 向买卖双方发送违规关闭消息</label>
+              </div>
+              <div class="between" style="margin-top:16px">
+                <span class="tiny muted">已售出商品发现违规时，仅追加标记并公开隐藏，保留成交事实</span>
+                <div class="row">
+                  <button class="btn btn-ghost">取消</button>
+                  <button class="btn btn-danger">确认违规下架</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="stack">
+          <div class="card">
+            <div class="card-head"><div class="card-title">处理记录</div></div>
+            <div class="card-body" style="padding-top:14px">
+              <div class="timeline">
+                <div class="tl done"><i></i><div><div class="t">商品发布</div><div class="d">2026-10-30 09:12 · 审核通过 v1</div></div></div>
+                <div class="tl done"><i></i><div><div class="t">买家预约</div><div class="d">2026-10-30 11:26 · R20261030-0086</div></div></div>
+                <div class="tl"><i></i><div><div class="t">本次违规处理</div><div class="d">待提交 · 操作人 周明</div></div></div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-head"><div class="card-title">处理口径</div></div>
+            <div class="card-body" style="padding-top:10px">
+              <div class="small muted" style="line-height:1.95">
+                违规处理适用于已发布、已预约、交易中和普通已下架的商品；草稿、待审核与审核驳回仍走原审核流程。<br><br>
+                卖家仅可提交整改恢复申请，经管理员允许后退回草稿重新送审，不能直接恢复发布或旧预约。
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

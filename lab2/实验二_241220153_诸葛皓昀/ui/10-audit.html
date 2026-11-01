@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>拾集管理后台 · 审计日志</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="admin">
+  <aside class="side">
+    <div class="brand">
+      <div class="brand-mark"></div>
+      <div><div class="brand-name" style="font-size:17px">拾集</div><div class="brand-sub">ADMIN CONSOLE</div></div>
+    </div>
+    <div class="group">交易治理</div>
+    <a href="06-admin-review.html">
+      <svg class="icon sm" viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+      商品审核
+    </a>
+    <a href="07-admin-violation.html">
+      <svg class="icon sm" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v5M12 16h.01"/></svg>
+      违规处理
+    </a>
+    <div class="group">基础数据</div>
+    <a href="11-admin-base.html">
+      <svg class="icon sm" viewBox="0 0 24 24"><path d="M20 12l-8 8-9-9V4h7z"/><circle cx="7.5" cy="7.5" r="1.2"/></svg>
+      分类与邀请码
+    </a>
+    <a href="11-admin-base.html">
+      <svg class="icon sm" viewBox="0 0 24 24"><circle cx="9" cy="8" r="4"/><path d="M2 21v-2a5 5 0 0 1 5-5h4"/><path d="M17 8l5 5M22 8l-5 5"/></svg>
+      账号封禁
+    </a>
+    <div class="group">分析与追溯</div>
+    <a href="08-stats.html">
+      <svg class="icon sm" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15v3M12 9v9M17 6v12"/></svg>
+      统计报表
+    </a>
+    <a class="active" href="10-audit.html">
+      <svg class="icon sm" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h6"/></svg>
+      审计日志
+    </a>
+    <div class="foot">管理员账号不参与买卖<br>界面不可修改或删除日志</div>
+  </aside>
+
+  <div class="admin-main">
+    <div class="admin-top">
+      <div class="row"><div class="title">审计日志</div><span class="badge gray">只读 · 保留 180 天</span></div>
+      <div class="row"><span class="small muted">管理员 · 周明</span><div class="avatar">周</div></div>
+    </div>
+
+    <div class="admin-page">
+      <div class="card">
+        <div class="filter-bar">
+          <input class="input" placeholder="操作人 / 用户编号">
+          <select class="select"><option>全部操作类型</option><option>提交审核</option><option>审核通过</option><option>创建预约</option><option>确认预约</option><option>违规处理</option><option>隐私查询</option></select>
+          <input class="input" placeholder="商品 / 预约编号">
+          <select class="select"><option>全部结果</option><option>成功</option><option>失败</option></select>
+          <input class="input" style="width:120px" value="2026-10-31">
+          <button class="btn btn-primary btn-sm" style="height:34px">查询</button>
+          <span class="tiny muted" style="margin-left:auto">共 2,431 条 · 按服务器时间倒序</span>
+        </div>
+
+        <div class="audit-layout" style="padding:12px 14px">
+          <table class="table">
+            <thead>
+              <tr><th>时间</th><th>操作者（角色）</th><th>操作</th><th>业务对象</th><th>结果</th><th>请求标识</th></tr>
+            </thead>
+            <tbody>
+              <tr style="background:#f7fbfa">
+                <td class="mono">10-31 15:42:03</td>
+                <td>周明 <span class="badge plain gray">管理员</span></td>
+                <td>审核通过</td>
+                <td class="mono">I-…0140</td>
+                <td><span class="badge green">成功</span></td>
+                <td class="mono small">REQ-7f3a91</td>
+              </tr>
+              <tr>
+                <td class="mono">10-31 15:40:12</td>
+                <td>周牧之 <span class="badge plain gray">普通用户</span></td>
+                <td>提交审核</td>
+                <td class="mono">I-…0142</td>
+                <td><span class="badge green">成功</span></td>
+                <td class="mono small">REQ-2c81e0</td>
+              </tr>
+              <tr>
+                <td class="mono">10-31 15:02:06</td>
+                <td>林夏 <span class="badge plain gray">普通用户</span></td>
+                <td>创建预约</td>
+                <td class="mono">R-…0086</td>
+                <td><span class="badge green">成功</span></td>
+                <td class="mono small">REQ-a04b7c</td>
+              </tr>
+              <tr>
+                <td class="mono">10-31 14:58:44</td>
+                <td>林夏 <span class="badge plain gray">普通用户</span></td>
+                <td>创建预约</td>
+                <td class="mono">R-…0086</td>
+                <td><span class="badge red">失败</span></td>
+                <td class="mono small">REQ-a04b7c</td>
+              </tr>
+              <tr>
+                <td class="mono">10-31 14:20:31</td>
+                <td>系统 <span class="badge plain gray">到期任务</span></td>
+                <td>超时释放</td>
+                <td class="mono">R-…0031</td>
+                <td><span class="badge green">成功</span></td>
+                <td class="mono small">JOB-00e1</td>
+              </tr>
+              <tr>
+                <td class="mono">10-31 13:12:09</td>
+                <td>周明 <span class="badge plain gray">管理员</span></td>
+                <td>隐私查询</td>
+                <td class="mono">U-…0231</td>
+                <td><span class="badge green">成功</span></td>
+                <td class="mono small">REQ-91cd22</td>
+              </tr>
+              <tr>
+                <td class="mono">10-31 11:05:57</td>
+                <td>赵一苇 <span class="badge plain gray">普通用户</span></td>
+                <td>保存草稿</td>
+                <td class="mono">I-…0139</td>
+                <td><span class="badge green">成功</span></td>
+                <td class="mono small">REQ-5bd0a1</td>
+              </tr>
+              <tr>
+                <td class="mono">10-31 09:30:15</td>
+                <td>未识别身份</td>
+                <td>登录</td>
+                <td class="mono">—</td>
+                <td><span class="badge red">失败</span></td>
+                <td class="mono small">REQ-e7a013</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <aside class="card log-detail" style="box-shadow:none">
+            <div class="between">
+              <span class="badge teal">日志详情</span>
+              <span class="mono tiny muted">L-20261031-0412</span>
+            </div>
+            <div class="divider" style="margin:12px 0"></div>
+            <div class="log-field"><span class="k">操作者</span><span class="v">周明（U-000001）</span></div>
+            <div class="log-field"><span class="k">当时角色</span><span class="v">管理员</span></div>
+            <div class="log-field"><span class="k">操作类型</span><span class="v">审核通过</span></div>
+            <div class="log-field"><span class="k">业务对象</span><span class="v">商品 I-…0140</span></div>
+            <div class="log-field"><span class="k">请求标识</span><span class="v mono">REQ-7f3a91</span></div>
+            <div class="log-field"><span class="k">结果</span><span class="v" style="color:var(--green)">成功</span></div>
+            <div class="log-field"><span class="k">服务器时间</span><span class="v mono">15:42:03.118</span></div>
+            <div class="divider" style="margin:10px 0"></div>
+            <div class="tiny muted" style="margin-bottom:6px">状态变化</div>
+            <div class="row" style="gap:8px">
+              <span class="badge gray">待审核</span>
+              <svg class="icon sm" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              <span class="badge green">已发布</span>
+            </div>
+            <div class="tiny muted" style="margin-top:10px;line-height:1.8">审核版本 v3 与当前版本一致；未记录密码、令牌或完整联系方式。</div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

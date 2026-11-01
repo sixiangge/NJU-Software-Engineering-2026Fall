@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>拾集管理后台 · 商品审核</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="admin">
+  <aside class="side">
+    <div class="brand">
+      <div class="brand-mark"></div>
+      <div><div class="brand-name" style="font-size:17px">拾集</div><div class="brand-sub">ADMIN CONSOLE</div></div>
+    </div>
+    <div class="group">交易治理</div>
+    <a class="active" href="06-admin-review.html">
+      <svg class="icon sm" viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+      商品审核
+    </a>
+    <a href="07-admin-violation.html">
+      <svg class="icon sm" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v5M12 16h.01"/></svg>
+      违规处理
+    </a>
+    <div class="group">基础数据</div>
+    <a href="11-admin-base.html">
+      <svg class="icon sm" viewBox="0 0 24 24"><path d="M20 12l-8 8-9-9V4h7z"/><circle cx="7.5" cy="7.5" r="1.2"/></svg>
+      分类与邀请码
+    </a>
+    <a href="11-admin-base.html">
+      <svg class="icon sm" viewBox="0 0 24 24"><circle cx="9" cy="8" r="4"/><path d="M2 21v-2a5 5 0 0 1 5-5h4"/><path d="M17 8l5 5M22 8l-5 5"/></svg>
+      账号封禁
+    </a>
+    <div class="group">分析与追溯</div>
+    <a href="08-stats.html">
+      <svg class="icon sm" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15v3M12 9v9M17 6v12"/></svg>
+      统计报表
+    </a>
+    <a href="10-audit.html">
+      <svg class="icon sm" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h6"/></svg>
+      审计日志
+    </a>
+    <div class="foot">管理员账号不参与买卖<br>界面不可修改或删除日志</div>
+  </aside>
+
+  <div class="admin-main">
+    <div class="admin-top">
+      <div class="row"><div class="title">商品审核</div><span class="badge amber">4 件待处理</span></div>
+      <div class="row"><span class="small muted">管理员 · 周明</span><div class="avatar">周</div></div>
+    </div>
+
+    <div class="admin-page">
+      <div class="between" style="margin-bottom:14px">
+        <div class="pills">
+          <span class="pill active">待审核 4</span><span class="pill">已通过 128</span><span class="pill">已驳回 9</span>
+        </div>
+        <span class="small muted">审核通过后发布内容须与送审版本一致</span>
+      </div>
+
+      <div class="review-layout">
+        <div class="card queue">
+          <div class="queue-item active">
+            <div class="photo" style="background:linear-gradient(145deg,#eaf2f1,#d5e5e1)">
+              <svg viewBox="0 0 120 120"><rect x="26" y="30" width="68" height="44" rx="4" fill="rgba(255,255,255,.7)" stroke="rgba(15,118,110,.45)" stroke-width="2"/><path d="M52 74h16l4 10H48z" fill="rgba(255,255,255,.8)" stroke="rgba(15,118,110,.4)" stroke-width="2"/></svg>
+            </div>
+            <div style="flex:1">
+              <div class="t">戴尔 U2723QE 显示器</div>
+              <div class="d">周牧之 · 15:40 送审 · v3</div>
+            </div>
+            <span class="badge gray" style="align-self:center">数码</span>
+          </div>
+          <div class="queue-item">
+            <div class="photo" style="background:linear-gradient(145deg,#f3eee4,#e7dcc8)">
+              <svg viewBox="0 0 120 120"><path d="M42 30v46h36V30" fill="rgba(255,255,255,.65)" stroke="rgba(110,76,44,.5)" stroke-width="2"/><path d="M42 64h36M48 76v18M72 76v18" stroke="rgba(110,76,44,.55)" stroke-width="2"/></svg>
+            </div>
+            <div style="flex:1">
+              <div class="t">宜家人体工学办公椅</div>
+              <div class="d">王砚秋 · 14:12 送审 · v1</div>
+            </div>
+            <span class="badge gray" style="align-self:center">家居</span>
+          </div>
+          <div class="queue-item">
+            <div class="photo" style="background:linear-gradient(145deg,#f4eadf,#e9d5bf)">
+              <svg viewBox="0 0 120 120"><path d="M46 28h28l10 24H36z" fill="rgba(255,255,255,.7)" stroke="rgba(126,82,38,.5)" stroke-width="2"/><path d="M60 52v30M46 88h28" stroke="rgba(126,82,38,.55)" stroke-width="2"/></svg>
+            </div>
+            <div style="flex:1">
+              <div class="t">小米台灯 Pro</div>
+              <div class="d">赵一苇 · 11:05 送审 · v2</div>
+            </div>
+            <span class="badge gray" style="align-self:center">家居</span>
+          </div>
+          <div class="queue-item">
+            <div class="photo" style="background:linear-gradient(145deg,#f1ece9,#e2d4ce)">
+              <svg viewBox="0 0 120 120"><path d="M66 26l8 8-14 14c5 6 4 14-2 18-7 5-17 4-21-3-4-7-1-16 6-19 4-2 7-2 9-1z" fill="rgba(255,255,255,.65)" stroke="rgba(120,74,66,.5)" stroke-width="2"/><path d="M74 34l14 14M68 26l6-6 20 20-6 6" stroke="rgba(120,74,66,.6)" stroke-width="2"/></svg>
+            </div>
+            <div style="flex:1">
+              <div class="t">雅马哈 F310 民谣吉他</div>
+              <div class="d">周予安 · 昨天 20:31 送审 · v1</div>
+            </div>
+            <span class="badge gray" style="align-self:center">乐器</span>
+          </div>
+        </div>
+
+        <div class="card review-panel">
+          <div class="between">
+            <div class="row">
+              <span class="badge amber">待审核</span>
+              <span class="badge plain gray">送审版本 v3</span>
+            </div>
+            <a class="link muted" href="#">查看历史版本</a>
+          </div>
+          <h2 style="font-size:20px;margin-top:10px">戴尔 U2723QE 27 英寸 4K 显示器，箱说全</h2>
+          <div class="row" style="margin-top:6px">
+            <span style="font-size:22px;font-weight:700;color:var(--red)">¥1,280</span>
+            <span class="badge gray">95 新</span>
+            <span class="tiny muted">数码电子 / 显示器</span>
+          </div>
+
+          <div class="review-gallery" style="margin-top:12px">
+            <div class="photo" style="height:74px;background:linear-gradient(145deg,#eaf2f1,#d5e5e1)"><svg viewBox="0 0 120 90"><rect x="26" y="18" width="68" height="44" rx="4" fill="rgba(255,255,255,.7)" stroke="rgba(15,118,110,.45)" stroke-width="2"/><path d="M52 62h16l4 10H48z" fill="rgba(255,255,255,.8)" stroke="rgba(15,118,110,.4)" stroke-width="2"/></svg></div>
+            <div class="photo" style="height:74px;background:linear-gradient(145deg,#e6efee,#d1e1dd)"><svg viewBox="0 0 120 90"><rect x="24" y="22" width="72" height="36" rx="4" fill="rgba(255,255,255,.6)" stroke="rgba(15,118,110,.4)" stroke-width="2"/><path d="M34 38h34M34 48h46" stroke="rgba(15,118,110,.3)" stroke-width="2"/></svg></div>
+            <div class="photo" style="height:74px;background:linear-gradient(145deg,#efe9e1,#dfd2c3)"><svg viewBox="0 0 120 90"><rect x="38" y="14" width="44" height="52" rx="3" fill="rgba(255,255,255,.6)" stroke="rgba(120,86,36,.4)" stroke-width="2"/><path d="M46 28h28M46 38h28M46 48h18" stroke="rgba(120,86,36,.3)" stroke-width="2"/></svg></div>
+            <div class="photo" style="height:74px;background:linear-gradient(145deg,#e8eef2,#d5e0e7)"><svg viewBox="0 0 120 90"><circle cx="60" cy="45" r="24" fill="none" stroke="rgba(38,74,130,.4)" stroke-width="2"/><path d="M50 45l7 7 14-15" stroke="rgba(38,74,130,.5)" stroke-width="3" fill="none"/></svg></div>
+          </div>
+
+          <div class="divider"></div>
+          <div class="row" style="align-items:flex-start;gap:28px">
+            <div class="kv" style="flex:1">
+              <span class="k">卖家</span><span class="v">周牧之（信用 98）</span>
+              <span class="k">交易地点</span><span class="v">仙林校区 · 图书馆东门</span>
+              <span class="k">图片</span><span class="v">3 张，均通过 JPEG 校验</span>
+              <span class="k">送审时间</span><span class="v">2026-10-31 15:40</span>
+            </div>
+            <div class="prose" style="flex:1.15;font-size:12px;line-height:1.85">
+              2024 年购入，屏幕无坏点、无划痕，支架升降与旋转正常。原装电源、DP 线、说明书与包装箱齐全，可当面通电验机。
+            </div>
+          </div>
+
+          <div class="divider"></div>
+          <div class="field">
+            <label>驳回原因 <span class="tiny muted" style="font-weight:400">（驳回时必填，卖家可见）</span></label>
+            <textarea class="textarea" style="min-height:58px" placeholder="例如：描述中的型号与图片不一致，请补充实拍图后重新送审"></textarea>
+          </div>
+          <div class="between" style="margin-top:12px">
+            <span class="tiny muted">通过后按当前版本发布；撤回的旧版本不能再次通过</span>
+            <div class="row">
+              <button class="btn btn-ghost">驳回</button>
+              <button class="btn btn-primary">通过并发布</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>拾集 · 登录</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="auth">
+  <div class="auth-brand">
+    <div class="brand">
+      <div class="brand-mark"></div>
+      <div>
+        <div class="brand-name" style="color:#fff">拾集</div>
+        <div class="brand-sub">SECONDHAND · 校园与社区</div>
+      </div>
+    </div>
+    <h1>把闲置，交给<br>下一位<em>需要它的人</em></h1>
+    <p class="lead">从发布、审核到预约确认，每一步都有明确的状态与执行者。付款与交付由双方在线下完成。</p>
+    <div class="auth-steps">
+      <div class="auth-step">
+        <div class="n">01</div>
+        <div><div class="t">发布并送审</div><div class="d">补齐商品资料，管理员审核后公开</div></div>
+      </div>
+      <div class="auth-step">
+        <div class="n">02</div>
+        <div><div class="t">预约与确认</div><div class="d">同一商品仅一条有效预约，卖家在 24 小时内确认</div></div>
+      </div>
+      <div class="auth-step">
+        <div class="n">03</div>
+        <div><div class="t">线下交付并完成</div><div class="d">买家确认收到物品后，交易记为完成</div></div>
+      </div>
+    </div>
+    <div class="foot">预约不涉及线上付款 · 平台不提供物流与争议仲裁</div>
+  </div>
+
+  <div class="auth-panel">
+    <div class="auth-card">
+      <div class="tabs">
+        <a class="active" href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="#">管理员邀请码</a>
+      </div>
+      <h2>欢迎回来</h2>
+      <div class="sub">同一账号既可以购买，也可以发布自己的闲置。</div>
+
+      <div class="field">
+        <label>用户名</label>
+        <div class="input-wrap">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <input class="input" type="text" value="lin_xia" autocomplete="username">
+        </div>
+      </div>
+      <div class="field">
+        <label>密码</label>
+        <div class="input-wrap">
+          <svg class="icon" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <input class="input" type="password" value="••••••••" autocomplete="current-password">
+        </div>
+      </div>
+
+      <div class="row between" style="margin:4px 0 18px">
+        <label class="row small muted" style="gap:6px"><input type="checkbox" checked> 保持登录</label>
+        <a class="link" href="#">登录遇到问题？</a>
+      </div>
+
+      <button class="btn btn-primary btn-block btn-lg">登录</button>
+
+      <div class="auth-note">
+        <b style="color:var(--ink-2)">安全提示</b><br>
+        同一账号 15 分钟内连续登录失败 5 次，将暂停登录 15 分钟；不存在账号与密码错误使用统一提示。
+      </div>
+
+      <div class="auth-foot">还没有账号？<a class="link" href="#">立即注册</a>　·　管理员需凭一次性邀请码注册</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

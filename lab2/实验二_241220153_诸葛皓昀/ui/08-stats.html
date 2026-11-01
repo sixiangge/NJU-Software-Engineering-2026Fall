@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>拾集管理后台 · 统计报表</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="admin">
+  <aside class="side">
+    <div class="brand">
+      <div class="brand-mark"></div>
+      <div><div class="brand-name" style="font-size:17px">拾集</div><div class="brand-sub">ADMIN CONSOLE</div></div>
+    </div>
+    <div class="group">交易治理</div>
+    <a href="06-admin-review.html">
+      <svg class="icon sm" viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+      商品审核
+    </a>
+    <a href="07-admin-violation.html">
+      <svg class="icon sm" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M12 8v5M12 16h.01"/></svg>
+      违规处理
+    </a>
+    <div class="group">基础数据</div>
+    <a href="11-admin-base.html">
+      <svg class="icon sm" viewBox="0 0 24 24"><path d="M20 12l-8 8-9-9V4h7z"/><circle cx="7.5" cy="7.5" r="1.2"/></svg>
+      分类与邀请码
+    </a>
+    <a href="11-admin-base.html">
+      <svg class="icon sm" viewBox="0 0 24 24"><circle cx="9" cy="8" r="4"/><path d="M2 21v-2a5 5 0 0 1 5-5h4"/><path d="M17 8l5 5M22 8l-5 5"/></svg>
+      账号封禁
+    </a>
+    <div class="group">分析与追溯</div>
+    <a class="active" href="08-stats.html">
+      <svg class="icon sm" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15v3M12 9v9M17 6v12"/></svg>
+      统计报表
+    </a>
+    <a href="10-audit.html">
+      <svg class="icon sm" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h6"/></svg>
+      审计日志
+    </a>
+    <div class="foot">管理员账号不参与买卖<br>界面不可修改或删除日志</div>
+  </aside>
+
+  <div class="admin-main">
+    <div class="admin-top">
+      <div class="row"><div class="title">统计报表</div><span class="badge teal">全站口径</span></div>
+      <div class="row"><span class="small muted">管理员 · 周明</span><div class="avatar">周</div></div>
+    </div>
+
+    <div class="admin-page">
+      <div class="between" style="margin-bottom:14px">
+        <div class="row">
+          <span class="small muted">成交日期</span>
+          <input class="input" style="width:150px;height:34px;padding:6px 10px;font-size:12.5px" value="2026-10-01">
+          <span class="muted">至</span>
+          <input class="input" style="width:150px;height:34px;padding:6px 10px;font-size:12.5px" value="2026-10-31">
+          <button class="btn btn-ghost btn-sm" style="height:34px">查询</button>
+        </div>
+        <span class="tiny muted">按北京时间自然日统计，含开始日零点、不含结束日次日零点</span>
+      </div>
+
+      <div class="kpis">
+        <div class="card kpi">
+          <div class="label">成交笔数</div>
+          <div class="value">128 <small>笔</small></div>
+          <div class="foot">按“已完成”预约编号去重，重发完成不重复计数</div>
+        </div>
+        <div class="card kpi">
+          <div class="label">记录成交金额</div>
+          <div class="value">¥42,680<small>.00</small></div>
+          <div class="foot">按预约成功时的商品标价快照合计，不代表实际线下付款</div>
+        </div>
+        <div class="card kpi">
+          <div class="label">其中被标记违规的成交</div>
+          <div class="value">3 <small>笔</small></div>
+          <div class="foot">已售出后追加违规标记，成交仍保留并单列</div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1.32fr .68fr;gap:16px;margin-top:16px;align-items:start">
+        <div class="card">
+          <div class="card-head">
+            <div class="card-title">各分类成交笔数</div>
+            <span class="tiny muted">2026-10-01 ～ 2026-10-31</span>
+          </div>
+          <div class="card-body">
+            <div class="bars">
+              <div class="bar"><b>38</b><i style="height:82%"></i><span>数码电子</span></div>
+              <div class="bar"><b>29</b><i style="height:63%"></i><span>图书教材</span></div>
+              <div class="bar"><b>21</b><i style="height:46%"></i><span>运动户外</span></div>
+              <div class="bar"><b>18</b><i style="height:39%"></i><span>家居生活</span></div>
+              <div class="bar"><b>12</b><i style="height:26%"></i><span>乐器音响</span></div>
+              <div class="bar"><b>10</b><i style="height:22%"></i><span>其他</span></div>
+            </div>
+            <div class="divider"></div>
+            <div class="row" style="justify-content:space-between">
+              <span class="tiny muted">分类按预约成功时的编号与名称快照统计，不随现分类改名变化</span>
+              <div class="row tiny muted"><span style="width:8px;height:8px;border-radius:2px;background:var(--brand);display:inline-block"></span> 已完成预约</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-head"><div class="card-title">当前库存</div><span class="tiny muted">按查询时状态</span></div>
+          <div style="padding:2px 0 6px">
+            <table class="table">
+              <thead><tr><th>分类</th><th>已发布</th><th>已预约</th><th>交易中</th></tr></thead>
+              <tbody>
+                <tr><td>数码电子</td><td class="num">316</td><td class="num">24</td><td class="num">11</td></tr>
+                <tr><td>图书教材</td><td class="num">244</td><td class="num">9</td><td class="num">4</td></tr>
+                <tr><td>运动户外</td><td class="num">187</td><td class="num">16</td><td class="num">7</td></tr>
+                <tr><td>家居生活</td><td class="num">208</td><td class="num">12</td><td class="num">5</td></tr>
+                <tr><td>乐器音响</td><td class="num">96</td><td class="num">6</td><td class="num">2</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div style="padding:10px 16px;border-top:1px solid var(--line-2)" class="tiny muted">
+            当前库存不套用成交日期；公开列表默认仅展示“已发布”。
+          </div>
+        </div>
+      </div>
+
+      <div class="notice" style="margin-top:16px;background:#f4f8f8;color:var(--muted);border:1px solid var(--line)">
+        <svg class="icon sm" viewBox="0 0 24 24" style="flex:0 0 15px"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>
+        取消、拒绝、超时与异常关闭不计成交；金额精确到分，使用预约成功时价格快照。卖家仅可查看本人汇总，不提供全站报表。
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>拾集 · 我的交易</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="02-browse.html">
+    <div class="brand-mark"></div>
+    <div><div class="brand-name">拾集</div><div class="brand-sub">SECONDHAND</div></div>
+  </a>
+  <nav class="nav">
+    <a href="02-browse.html">逛市场</a>
+    <a class="active" href="05-workspace.html">我买到的</a>
+    <a href="05-workspace.html">我发布的</a>
+    <a href="09-messages.html">消息</a>
+  </nav>
+  <div class="search">
+    <svg class="icon sm" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+    <input placeholder="搜索标题或描述">
+  </div>
+  <div class="top-actions">
+    <a class="btn btn-primary btn-sm" href="04-publish.html" style="height:34px;padding:0 14px">发布闲置</a>
+    <a class="icon-btn" href="09-messages.html">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M18 8a6 6 0 1 0-12 0c0 7-3 8-3 8h18s-3-1-3-8"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+      <span class="dot"></span>
+    </a>
+    <div class="avatar">林</div>
+  </div>
+</header>
+
+<main class="page">
+  <div class="page-head">
+    <div>
+      <div class="page-title">我的交易</div>
+      <div class="page-sub">同一账号可同时作为买家和卖家；角色随操作与数据归属确定</div>
+    </div>
+    <div class="pills">
+      <a class="pill active" href="#">我发布的 4</a>
+      <a class="pill" href="#">我买到的 3</a>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1.16fr .84fr;gap:18px;align-items:start">
+    <section class="card">
+      <div class="card-head">
+        <div class="card-title">我发布的</div>
+        <span class="small muted">共 4 件 · 有效预约期间不可改价或下架</span>
+      </div>
+      <div class="card-body" style="padding-top:6px;padding-bottom:8px">
+        <div class="deal">
+          <div class="photo" style="background:linear-gradient(145deg,#eaf2f1,#d5e5e1)">
+            <svg viewBox="0 0 120 120"><rect x="26" y="28" width="68" height="44" rx="4" fill="rgba(255,255,255,.7)" stroke="rgba(15,118,110,.45)" stroke-width="2"/><path d="M52 72h16l4 12H48z" fill="rgba(255,255,255,.8)" stroke="rgba(15,118,110,.4)" stroke-width="2"/></svg>
+          </div>
+          <div class="info">
+            <div class="name">戴尔 U2723QE 27 英寸 4K 显示器</div>
+            <div class="sub">¥1,280 · 1 条待确认预约 · 买家 林夏</div>
+            <div class="acts">
+              <span class="badge amber">已预约</span>
+              <a class="link" href="#">查看预约</a>
+              <span class="link muted">改价 / 下架不可用</span>
+            </div>
+          </div>
+          <div class="tiny muted">10-31 14:20</div>
+        </div>
+
+        <div class="deal">
+          <div class="photo" style="background:linear-gradient(145deg,#e9eef7,#d7e0ef)">
+            <svg viewBox="0 0 120 120"><rect x="28" y="36" width="64" height="42" rx="7" fill="rgba(255,255,255,.7)" stroke="rgba(38,74,130,.5)" stroke-width="2"/><circle cx="60" cy="57" r="14" fill="none" stroke="rgba(38,74,130,.5)" stroke-width="2"/><rect x="48" y="26" width="24" height="10" rx="3" fill="rgba(255,255,255,.8)" stroke="rgba(38,74,130,.4)" stroke-width="2"/></svg>
+          </div>
+          <div class="info">
+            <div class="name">富士 X-S10 微单套机 15-45mm</div>
+            <div class="sub">¥5,600 · 买家已确认，等待线下交付</div>
+            <div class="acts"><span class="badge blue">交易中</span><a class="link" href="#">查看预约</a></div>
+          </div>
+          <div class="tiny muted">10-30 09:12</div>
+        </div>
+
+        <div class="deal">
+          <div class="photo" style="background:linear-gradient(145deg,#f3eee4,#e7dcc8)">
+            <svg viewBox="0 0 120 120"><path d="M42 30v46h36V30" fill="rgba(255,255,255,.65)" stroke="rgba(110,76,44,.5)" stroke-width="2"/><path d="M42 64h36M48 76v18M72 76v18" stroke="rgba(110,76,44,.55)" stroke-width="2"/></svg>
+          </div>
+          <div class="info">
+            <div class="name">宜家人体工学办公椅，可调腰托</div>
+            <div class="sub">¥320 · 2026-10-31 15:40 提交，等待管理员审核</div>
+            <div class="acts"><span class="badge gray">待审核</span><a class="link" href="#">撤回</a><span class="link muted">审核期间不可修改</span></div>
+          </div>
+          <div class="tiny muted">10-31 15:40</div>
+        </div>
+
+        <div class="deal">
+          <div class="photo" style="background:linear-gradient(145deg,#f4eadf,#e9d5bf)">
+            <svg viewBox="0 0 120 120"><path d="M46 28h28l10 24H36z" fill="rgba(255,255,255,.7)" stroke="rgba(126,82,38,.5)" stroke-width="2"/><path d="M60 52v30M46 88h28" stroke="rgba(126,82,38,.55)" stroke-width="2"/></svg>
+          </div>
+          <div class="info">
+            <div class="name">小米台灯 Pro，护眼无频闪</div>
+            <div class="sub">¥79 · 2026-10-18 完成 · 记录成交金额 ¥79.00</div>
+            <div class="acts"><span class="badge green">已售出</span><a class="link" href="#">查看记录</a></div>
+          </div>
+          <div class="tiny muted">10-18 20:06</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="card-head">
+        <div class="card-title">我买到的</div>
+        <span class="small muted">3 笔进行中</span>
+      </div>
+      <div class="card-body" style="padding-top:12px">
+        <div class="my-res">
+          <div class="between">
+            <div class="row">
+              <div class="photo" style="width:38px;height:38px;border-radius:8px;background:linear-gradient(145deg,#eaf2f1,#d5e5e1)">
+                <svg viewBox="0 0 120 120"><rect x="28" y="32" width="64" height="40" rx="4" fill="rgba(255,255,255,.7)" stroke="rgba(15,118,110,.45)" stroke-width="2"/><path d="M52 72h16l4 10H48z" fill="rgba(255,255,255,.8)" stroke="rgba(15,118,110,.4)" stroke-width="2"/></svg>
+              </div>
+              <div>
+                <div style="font-size:12.5px;font-weight:600">戴尔 U2723QE 显示器</div>
+                <div class="tiny muted">卖家 周牧之 · ¥1,280</div>
+              </div>
+            </div>
+            <span class="badge amber">待卖家确认</span>
+          </div>
+          <div class="between" style="margin-top:9px">
+            <div class="tiny muted">剩余 <span style="color:var(--amber);font-weight:700">21:36:18</span> · 到期自动释放</div>
+            <a class="link danger" href="#">取消预约</a>
+          </div>
+        </div>
+
+        <div class="my-res">
+          <div class="between">
+            <div class="row">
+              <div class="photo" style="width:38px;height:38px;border-radius:8px;background:linear-gradient(145deg,#e9eef7,#d7e0ef)">
+                <svg viewBox="0 0 120 120"><rect x="28" y="36" width="64" height="42" rx="7" fill="rgba(255,255,255,.7)" stroke="rgba(38,74,130,.5)" stroke-width="2"/><circle cx="60" cy="57" r="14" fill="none" stroke="rgba(38,74,130,.5)" stroke-width="2"/><rect x="48" y="26" width="24" height="10" rx="3" fill="rgba(255,255,255,.8)" stroke="rgba(38,74,130,.4)" stroke-width="2"/></svg>
+              </div>
+              <div>
+                <div style="font-size:12.5px;font-weight:600">富士 X-S10 微单套机</div>
+                <div class="tiny muted">卖家 许知远 · ¥5,600 · 联系方式已展示</div>
+              </div>
+            </div>
+            <span class="badge blue">已确认</span>
+          </div>
+          <div class="between" style="margin-top:9px">
+            <div class="tiny muted">卖家已于 10-31 16:20 确认</div>
+            <a class="link" href="#">确认完成</a>
+          </div>
+        </div>
+
+        <div class="my-res" style="background:#fbfdfd">
+          <div class="between">
+            <div class="row">
+              <div class="photo" style="width:38px;height:38px;border-radius:8px;background:linear-gradient(145deg,#f1ece9,#e2d4ce)">
+                <svg viewBox="0 0 120 120"><path d="M66 26l8 8-14 14c5 6 4 14-2 18-7 5-17 4-21-3-4-7-1-16 6-19 4-2 7-2 9-1z" fill="rgba(255,255,255,.65)" stroke="rgba(120,74,66,.5)" stroke-width="2"/><path d="M74 34l14 14M68 26l6-6 20 20-6 6" stroke="rgba(120,74,66,.6)" stroke-width="2"/></svg>
+              </div>
+              <div>
+                <div style="font-size:12.5px;font-weight:600">雅马哈 F310 民谣吉他</div>
+                <div class="tiny muted">卖家 周予安 · ¥480 · 2026-10-20 完成</div>
+              </div>
+            </div>
+            <span class="badge green">已完成</span>
+          </div>
+          <div class="between" style="margin-top:9px">
+            <div class="tiny muted">成交金额按预约时标价记录</div>
+            <a class="link muted" href="#">查看详情</a>
+          </div>
+        </div>
+
+        <div class="notice" style="margin-top:12px">
+          <svg class="icon sm" viewBox="0 0 24 24" style="flex:0 0 15px"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>
+          联系方式仅在预约有效期间展示；预约进入终态后自动撤销访问权限。
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+</body>
+</html>
