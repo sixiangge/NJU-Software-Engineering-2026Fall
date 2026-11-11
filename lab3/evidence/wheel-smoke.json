@@ -5,7 +5,7 @@
       "-m",
       "venv",
       "--system-site-packages",
-      "C:\\Users\\25153\\AppData\\Local\\Temp\\tmpf98aaasp\\env"
+      "C:\\Users\\25153\\AppData\\Local\\Temp\\tmpuzyw2g6c\\env"
     ],
     "exit_code": 0,
     "stdout": "",
@@ -13,7 +13,7 @@
   },
   {
     "command": [
-      "C:\\Users\\25153\\AppData\\Local\\Temp\\tmpf98aaasp\\env\\Scripts\\python.exe",
+      "C:\\Users\\25153\\AppData\\Local\\Temp\\tmpuzyw2g6c\\env\\Scripts\\python.exe",
       "-m",
       "pip",
       "install",
@@ -22,23 +22,23 @@
       "E:\\计科课程资料\\软件工程\\lab\\lab3\\dist\\nju_secondhand-1.0.0-py3-none-any.whl"
     ],
     "exit_code": 0,
-    "stdout": "Processing E:\\计科课程资料\\软件工程\\lab\\lab3\\dist\\nju_secondhand-1.0.0-py3-none-any.whl\nInstalling collected packages: nju-secondhand\n  Attempting uninstall: nju-secondhand\n    Found existing installation: nju-secondhand 1.0.0\n    Not uninstalling nju-secondhand at c:\\users\\25153\\miniconda3\\lib\\site-packages, outside environment C:\\Users\\25153\\AppData\\Local\\Temp\\tmpf98aaasp\\env\n    Can't uninstall 'nju-secondhand'. No files were found to uninstall.\nSuccessfully installed nju-secondhand-1.0.0\n",
-    "stderr": "\n[notice] A new release of pip is available: 26.2.1 -> 26.3\n[notice] To update, run: C:\\Users\\25153\\AppData\\Local\\Temp\\tmpf98aaasp\\env\\Scripts\\python.exe -m pip install --upgrade pip\n"
+    "stdout": "Processing E:\\计科课程资料\\软件工程\\lab\\lab3\\dist\\nju_secondhand-1.0.0-py3-none-any.whl\nInstalling collected packages: nju-secondhand\n  Attempting uninstall: nju-secondhand\n    Found existing installation: nju-secondhand 1.0.0\n    Not uninstalling nju-secondhand at c:\\users\\25153\\miniconda3\\lib\\site-packages, outside environment C:\\Users\\25153\\AppData\\Local\\Temp\\tmpuzyw2g6c\\env\n    Can't uninstall 'nju-secondhand'. No files were found to uninstall.\nSuccessfully installed nju-secondhand-1.0.0\n",
+    "stderr": "\n[notice] A new release of pip is available: 26.2.1 -> 26.3\n[notice] To update, run: C:\\Users\\25153\\AppData\\Local\\Temp\\tmpuzyw2g6c\\env\\Scripts\\python.exe -m pip install --upgrade pip\n"
   },
   {
     "command": [
-      "C:\\Users\\25153\\AppData\\Local\\Temp\\tmpf98aaasp\\env\\Scripts\\python.exe",
+      "C:\\Users\\25153\\AppData\\Local\\Temp\\tmpuzyw2g6c\\env\\Scripts\\python.exe",
       "-I",
       "-c",
-      "import secondhand; print(secondhand.__file__); assert 'C:\\\\Users\\\\25153\\\\AppData\\\\Local\\\\Temp\\\\tmpf98aaasp\\\\env'.lower() in secondhand.__file__.lower()"
+      "import secondhand; print(secondhand.__file__); assert 'C:\\\\Users\\\\25153\\\\AppData\\\\Local\\\\Temp\\\\tmpuzyw2g6c\\\\env'.lower() in secondhand.__file__.lower()"
     ],
     "exit_code": 0,
-    "stdout": "C:\\Users\\25153\\AppData\\Local\\Temp\\tmpf98aaasp\\env\\Lib\\site-packages\\secondhand\\__init__.py\n",
+    "stdout": "C:\\Users\\25153\\AppData\\Local\\Temp\\tmpuzyw2g6c\\env\\Lib\\site-packages\\secondhand\\__init__.py\n",
     "stderr": ""
   },
   {
     "command": [
-      "C:\\Users\\25153\\AppData\\Local\\Temp\\tmpf98aaasp\\env\\Scripts\\python.exe",
+      "C:\\Users\\25153\\AppData\\Local\\Temp\\tmpuzyw2g6c\\env\\Scripts\\python.exe",
       "-I",
       "-m",
       "secondhand",
@@ -50,12 +50,12 @@
   },
   {
     "command": [
-      "C:\\Users\\25153\\AppData\\Local\\Temp\\tmpf98aaasp\\env\\Scripts\\python.exe",
+      "C:\\Users\\25153\\AppData\\Local\\Temp\\tmpuzyw2g6c\\env\\Scripts\\python.exe",
       "-I",
       "-m",
       "secondhand",
       "--db",
-      "C:\\Users\\25153\\AppData\\Local\\Temp\\tmpf98aaasp\\fresh.db",
+      "C:\\Users\\25153\\AppData\\Local\\Temp\\tmpuzyw2g6c\\fresh.db",
       "check"
     ],
     "exit_code": 0,

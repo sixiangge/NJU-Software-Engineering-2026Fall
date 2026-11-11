@@ -43,6 +43,7 @@ copying evidence\compile.txt -> nju_secondhand-1.0.0\evidence
 copying evidence\demo.txt -> nju_secondhand-1.0.0\evidence
 copying evidence\environment.json -> nju_secondhand-1.0.0\evidence
 copying evidence\format.txt -> nju_secondhand-1.0.0\evidence
+copying evidence\git.txt -> nju_secondhand-1.0.0\evidence
 copying evidence\lint.txt -> nju_secondhand-1.0.0\evidence
 copying evidence\source-counts.json -> nju_secondhand-1.0.0\evidence
 copying evidence\tests.txt -> nju_secondhand-1.0.0\evidence
@@ -69,6 +70,7 @@ copying src\secondhand\security.py -> nju_secondhand-1.0.0\src\secondhand
 copying src\secondhand\trading.py -> nju_secondhand-1.0.0\src\secondhand
 copying tests\test_application.py -> nju_secondhand-1.0.0\tests
 copying tools\demo.py -> nju_secondhand-1.0.0\tools
+copying tools\package.py -> nju_secondhand-1.0.0\tools
 copying tools\verify.py -> nju_secondhand-1.0.0\tools
 copying tools\wheel_smoke.py -> nju_secondhand-1.0.0\tools
 copying src\nju_secondhand.egg-info\SOURCES.txt -> nju_secondhand-1.0.0\src\nju_secondhand.egg-info
@@ -135,7 +137,7 @@ running install_egg_info
 Copying src\nju_secondhand.egg-info to build\bdist.win-amd64\wheel\.\nju_secondhand-1.0.0-py3.14.egg-info
 running install_scripts
 creating build\bdist.win-amd64\wheel\nju_secondhand-1.0.0.dist-info\WHEEL
-creating 'E:\\计科课程资料\\软件工程\\lab\\lab3\\dist\\.tmp-cmtnihh3\\nju_secondhand-1.0.0-py3-none-any.whl' and adding 'build\\bdist.win-amd64\\wheel' to it
+creating 'E:\\计科课程资料\\软件工程\\lab\\lab3\\dist\\.tmp-_rsggjzk\\nju_secondhand-1.0.0-py3-none-any.whl' and adding 'build\\bdist.win-amd64\\wheel' to it
 adding 'secondhand/__init__.py'
 adding 'secondhand/__main__.py'
 adding 'secondhand/accounts.py'
