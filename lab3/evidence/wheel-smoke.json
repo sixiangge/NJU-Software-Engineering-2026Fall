@@ -1,0 +1,65 @@
+[
+  {
+    "command": [
+      "C:\\Users\\25153\\Miniconda3\\python.exe",
+      "-m",
+      "venv",
+      "--system-site-packages",
+      "C:\\Users\\25153\\AppData\\Local\\Temp\\tmpf98aaasp\\env"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "C:\\Users\\25153\\AppData\\Local\\Temp\\tmpf98aaasp\\env\\Scripts\\python.exe",
+      "-m",
+      "pip",
+      "install",
+      "--no-deps",
+      "--force-reinstall",
+      "E:\\计科课程资料\\软件工程\\lab\\lab3\\dist\\nju_secondhand-1.0.0-py3-none-any.whl"
+    ],
+    "exit_code": 0,
+    "stdout": "Processing E:\\计科课程资料\\软件工程\\lab\\lab3\\dist\\nju_secondhand-1.0.0-py3-none-any.whl\nInstalling collected packages: nju-secondhand\n  Attempting uninstall: nju-secondhand\n    Found existing installation: nju-secondhand 1.0.0\n    Not uninstalling nju-secondhand at c:\\users\\25153\\miniconda3\\lib\\site-packages, outside environment C:\\Users\\25153\\AppData\\Local\\Temp\\tmpf98aaasp\\env\n    Can't uninstall 'nju-secondhand'. No files were found to uninstall.\nSuccessfully installed nju-secondhand-1.0.0\n",
+    "stderr": "\n[notice] A new release of pip is available: 26.2.1 -> 26.3\n[notice] To update, run: C:\\Users\\25153\\AppData\\Local\\Temp\\tmpf98aaasp\\env\\Scripts\\python.exe -m pip install --upgrade pip\n"
+  },
+  {
+    "command": [
+      "C:\\Users\\25153\\AppData\\Local\\Temp\\tmpf98aaasp\\env\\Scripts\\python.exe",
+      "-I",
+      "-c",
+      "import secondhand; print(secondhand.__file__); assert 'C:\\\\Users\\\\25153\\\\AppData\\\\Local\\\\Temp\\\\tmpf98aaasp\\\\env'.lower() in secondhand.__file__.lower()"
+    ],
+    "exit_code": 0,
+    "stdout": "C:\\Users\\25153\\AppData\\Local\\Temp\\tmpf98aaasp\\env\\Lib\\site-packages\\secondhand\\__init__.py\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "C:\\Users\\25153\\AppData\\Local\\Temp\\tmpf98aaasp\\env\\Scripts\\python.exe",
+      "-I",
+      "-m",
+      "secondhand",
+      "--help"
+    ],
+    "exit_code": 0,
+    "stdout": "usage: python.exe -m secondhand [-h] [--db DB] [--request-id REQUEST_ID]\n                                {shell,profile,logout,maintenance,check,backup,invite,categories,bootstrap,register,login,category,revoke-invite,ban,contact,draft,image,remove-image,export-image,item-action,violate,browse,item,reserve,reservations,reservation,contacts,trade,stats,messages,read-message,audit,result} ...\n\n���ֽ���ϵͳ��ԤԼ���漰���ϸ���\n\npositional arguments:\n  {shell,profile,logout,maintenance,check,backup,invite,categories,bootstrap,register,login,category,revoke-invite,ban,contact,draft,image,remove-image,export-image,item-action,violate,browse,item,reserve,reservations,reservation,contacts,trade,stats,messages,read-message,audit,result}\n    shell               ������������¼ƾ�ݽ��������ڴ�\n    profile             ��ǰ�˺�\n    logout              ע���Ự\n    maintenance         ִ��һ�ε����ͷź���ϢͶ��\n    check               ������ݿ���ҵ�񲻱���\n    backup              ���߱��ݣ�����ȫ����ʷ����\n    invite              ����Ա����һ����������\n    categories          ��ѯ����\n    bootstrap           bootstrap�˺ţ����밲ȫ����\n    register            register�˺ţ����밲ȫ����\n    login               login�˺ţ����밲ȫ����\n    category            ������ά�����ࣨ����Ա��\n    revoke-invite       ����δʹ��������\n    ban                 �����ͨ�˺Ų����������Ự\n    contact             ά�����˿�ѡ��ϵ��ʽ\n    draft               �½��򱣴治�����ݸ�\n    image               ���ݸ�����ʵ��JPEG/PNGͼƬ\n    remove-image        �Ƴ��ݸ�ͼƬ\n    export-image        ������Ȩ���ʵ���ƷͼƬ\n    item-action         ����Ʒ״̬��ִ������\n    violate             Υ���¼ܲ�ͬ���ر�ԤԼ\n    browse              ��ϲ�ѯ��Ʒ��ÿҳ20��\n    item                ��ѯ���顢�汾��ͼƬ���\n    reserve             ԤԼ���漰���ϸ���\n    reservations        ���˵����롢����ԤԼ������Ա�ɲ�ȫ��\n    trade               ���׶�������ɱ�ʾ���յ����½�������Ʒ\n    stats               ��¼�ɽ�����������ʵ���¸���\n    messages            վ����Ϣ\n    audit               ����Ա��ϲ�ѯ�����־\n    result              ��ԭ�����ʶ��ѯ���ύ���\n\noptions:\n  -h, --help            show this help message and exit\n  --db DB               SQLite���ݿ�λ��\n  --request-id REQUEST_ID\n                        ����ʱ���븴��ԭ�����ʶ\n",
+    "stderr": ""
+  },
+  {
+    "command": [
+      "C:\\Users\\25153\\AppData\\Local\\Temp\\tmpf98aaasp\\env\\Scripts\\python.exe",
+      "-I",
+      "-m",
+      "secondhand",
+      "--db",
+      "C:\\Users\\25153\\AppData\\Local\\Temp\\tmpf98aaasp\\fresh.db",
+      "check"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"ok\": true,\n  \"errors\": []\n}\n",
+    "stderr": ""
+  }
+]

@@ -1,0 +1,158 @@
+COMMAND: ['C:\\Users\\25153\\Miniconda3\\python.exe', '-m', 'build', '--no-isolation']
+EXIT CODE: 0
+
+* Getting build dependencies for sdist...
+running egg_info
+writing src\nju_secondhand.egg-info\PKG-INFO
+writing dependency_links to src\nju_secondhand.egg-info\dependency_links.txt
+writing entry points to src\nju_secondhand.egg-info\entry_points.txt
+writing requirements to src\nju_secondhand.egg-info\requires.txt
+writing top-level names to src\nju_secondhand.egg-info\top_level.txt
+reading manifest file 'src\nju_secondhand.egg-info\SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+writing manifest file 'src\nju_secondhand.egg-info\SOURCES.txt'
+* Building sdist...
+running sdist
+running egg_info
+writing src\nju_secondhand.egg-info\PKG-INFO
+writing dependency_links to src\nju_secondhand.egg-info\dependency_links.txt
+writing entry points to src\nju_secondhand.egg-info\entry_points.txt
+writing requirements to src\nju_secondhand.egg-info\requires.txt
+writing top-level names to src\nju_secondhand.egg-info\top_level.txt
+reading manifest file 'src\nju_secondhand.egg-info\SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+writing manifest file 'src\nju_secondhand.egg-info\SOURCES.txt'
+running check
+creating nju_secondhand-1.0.0
+creating nju_secondhand-1.0.0\evidence
+creating nju_secondhand-1.0.0\report
+creating nju_secondhand-1.0.0\src\nju_secondhand.egg-info
+creating nju_secondhand-1.0.0\src\secondhand
+creating nju_secondhand-1.0.0\tests
+creating nju_secondhand-1.0.0\tools
+copying files to nju_secondhand-1.0.0...
+copying MANIFEST.in -> nju_secondhand-1.0.0
+copying README.md -> nju_secondhand-1.0.0
+copying ai-log.md -> nju_secondhand-1.0.0
+copying pyproject.toml -> nju_secondhand-1.0.0
+copying report.pdf -> nju_secondhand-1.0.0
+copying review-checklist.md -> nju_secondhand-1.0.0
+copying evidence\build.txt -> nju_secondhand-1.0.0\evidence
+copying evidence\cli-help.txt -> nju_secondhand-1.0.0\evidence
+copying evidence\compile.txt -> nju_secondhand-1.0.0\evidence
+copying evidence\demo.txt -> nju_secondhand-1.0.0\evidence
+copying evidence\environment.json -> nju_secondhand-1.0.0\evidence
+copying evidence\format.txt -> nju_secondhand-1.0.0\evidence
+copying evidence\lint.txt -> nju_secondhand-1.0.0\evidence
+copying evidence\source-counts.json -> nju_secondhand-1.0.0\evidence
+copying evidence\tests.txt -> nju_secondhand-1.0.0\evidence
+copying evidence\wheel-smoke.json -> nju_secondhand-1.0.0\evidence
+copying report\main.tex -> nju_secondhand-1.0.0\report
+copying src\nju_secondhand.egg-info\PKG-INFO -> nju_secondhand-1.0.0\src\nju_secondhand.egg-info
+copying src\nju_secondhand.egg-info\SOURCES.txt -> nju_secondhand-1.0.0\src\nju_secondhand.egg-info
+copying src\nju_secondhand.egg-info\dependency_links.txt -> nju_secondhand-1.0.0\src\nju_secondhand.egg-info
+copying src\nju_secondhand.egg-info\entry_points.txt -> nju_secondhand-1.0.0\src\nju_secondhand.egg-info
+copying src\nju_secondhand.egg-info\requires.txt -> nju_secondhand-1.0.0\src\nju_secondhand.egg-info
+copying src\nju_secondhand.egg-info\top_level.txt -> nju_secondhand-1.0.0\src\nju_secondhand.egg-info
+copying src\secondhand\__init__.py -> nju_secondhand-1.0.0\src\secondhand
+copying src\secondhand\__main__.py -> nju_secondhand-1.0.0\src\secondhand
+copying src\secondhand\accounts.py -> nju_secondhand-1.0.0\src\secondhand
+copying src\secondhand\application.py -> nju_secondhand-1.0.0\src\secondhand
+copying src\secondhand\catalog.py -> nju_secondhand-1.0.0\src\secondhand
+copying src\secondhand\cli.py -> nju_secondhand-1.0.0\src\secondhand
+copying src\secondhand\core.py -> nju_secondhand-1.0.0\src\secondhand
+copying src\secondhand\database.py -> nju_secondhand-1.0.0\src\secondhand
+copying src\secondhand\domain.py -> nju_secondhand-1.0.0\src\secondhand
+copying src\secondhand\operations.py -> nju_secondhand-1.0.0\src\secondhand
+copying src\secondhand\queries.py -> nju_secondhand-1.0.0\src\secondhand
+copying src\secondhand\security.py -> nju_secondhand-1.0.0\src\secondhand
+copying src\secondhand\trading.py -> nju_secondhand-1.0.0\src\secondhand
+copying tests\test_application.py -> nju_secondhand-1.0.0\tests
+copying tools\demo.py -> nju_secondhand-1.0.0\tools
+copying tools\verify.py -> nju_secondhand-1.0.0\tools
+copying tools\wheel_smoke.py -> nju_secondhand-1.0.0\tools
+copying src\nju_secondhand.egg-info\SOURCES.txt -> nju_secondhand-1.0.0\src\nju_secondhand.egg-info
+Writing nju_secondhand-1.0.0\setup.cfg
+Creating tar archive
+removing 'nju_secondhand-1.0.0' (and everything under it)
+* Building wheel from sdist
+* Getting build dependencies for wheel...
+running egg_info
+writing src\nju_secondhand.egg-info\PKG-INFO
+writing dependency_links to src\nju_secondhand.egg-info\dependency_links.txt
+writing entry points to src\nju_secondhand.egg-info\entry_points.txt
+writing requirements to src\nju_secondhand.egg-info\requires.txt
+writing top-level names to src\nju_secondhand.egg-info\top_level.txt
+reading manifest file 'src\nju_secondhand.egg-info\SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+writing manifest file 'src\nju_secondhand.egg-info\SOURCES.txt'
+* Building wheel...
+running bdist_wheel
+running build
+running build_py
+creating build\lib\secondhand
+copying src\secondhand\accounts.py -> build\lib\secondhand
+copying src\secondhand\application.py -> build\lib\secondhand
+copying src\secondhand\catalog.py -> build\lib\secondhand
+copying src\secondhand\cli.py -> build\lib\secondhand
+copying src\secondhand\core.py -> build\lib\secondhand
+copying src\secondhand\database.py -> build\lib\secondhand
+copying src\secondhand\domain.py -> build\lib\secondhand
+copying src\secondhand\operations.py -> build\lib\secondhand
+copying src\secondhand\queries.py -> build\lib\secondhand
+copying src\secondhand\security.py -> build\lib\secondhand
+copying src\secondhand\trading.py -> build\lib\secondhand
+copying src\secondhand\__init__.py -> build\lib\secondhand
+copying src\secondhand\__main__.py -> build\lib\secondhand
+running egg_info
+writing src\nju_secondhand.egg-info\PKG-INFO
+writing dependency_links to src\nju_secondhand.egg-info\dependency_links.txt
+writing entry points to src\nju_secondhand.egg-info\entry_points.txt
+writing requirements to src\nju_secondhand.egg-info\requires.txt
+writing top-level names to src\nju_secondhand.egg-info\top_level.txt
+reading manifest file 'src\nju_secondhand.egg-info\SOURCES.txt'
+reading manifest template 'MANIFEST.in'
+writing manifest file 'src\nju_secondhand.egg-info\SOURCES.txt'
+installing to build\bdist.win-amd64\wheel
+running install
+running install_lib
+creating build\bdist.win-amd64\wheel
+creating build\bdist.win-amd64\wheel\secondhand
+copying build\lib\secondhand\accounts.py -> build\bdist.win-amd64\wheel\.\secondhand
+copying build\lib\secondhand\application.py -> build\bdist.win-amd64\wheel\.\secondhand
+copying build\lib\secondhand\catalog.py -> build\bdist.win-amd64\wheel\.\secondhand
+copying build\lib\secondhand\cli.py -> build\bdist.win-amd64\wheel\.\secondhand
+copying build\lib\secondhand\core.py -> build\bdist.win-amd64\wheel\.\secondhand
+copying build\lib\secondhand\database.py -> build\bdist.win-amd64\wheel\.\secondhand
+copying build\lib\secondhand\domain.py -> build\bdist.win-amd64\wheel\.\secondhand
+copying build\lib\secondhand\operations.py -> build\bdist.win-amd64\wheel\.\secondhand
+copying build\lib\secondhand\queries.py -> build\bdist.win-amd64\wheel\.\secondhand
+copying build\lib\secondhand\security.py -> build\bdist.win-amd64\wheel\.\secondhand
+copying build\lib\secondhand\trading.py -> build\bdist.win-amd64\wheel\.\secondhand
+copying build\lib\secondhand\__init__.py -> build\bdist.win-amd64\wheel\.\secondhand
+copying build\lib\secondhand\__main__.py -> build\bdist.win-amd64\wheel\.\secondhand
+running install_egg_info
+Copying src\nju_secondhand.egg-info to build\bdist.win-amd64\wheel\.\nju_secondhand-1.0.0-py3.14.egg-info
+running install_scripts
+creating build\bdist.win-amd64\wheel\nju_secondhand-1.0.0.dist-info\WHEEL
+creating 'E:\\计科课程资料\\软件工程\\lab\\lab3\\dist\\.tmp-cmtnihh3\\nju_secondhand-1.0.0-py3-none-any.whl' and adding 'build\\bdist.win-amd64\\wheel' to it
+adding 'secondhand/__init__.py'
+adding 'secondhand/__main__.py'
+adding 'secondhand/accounts.py'
+adding 'secondhand/application.py'
+adding 'secondhand/catalog.py'
+adding 'secondhand/cli.py'
+adding 'secondhand/core.py'
+adding 'secondhand/database.py'
+adding 'secondhand/domain.py'
+adding 'secondhand/operations.py'
+adding 'secondhand/queries.py'
+adding 'secondhand/security.py'
+adding 'secondhand/trading.py'
+adding 'nju_secondhand-1.0.0.dist-info/METADATA'
+adding 'nju_secondhand-1.0.0.dist-info/WHEEL'
+adding 'nju_secondhand-1.0.0.dist-info/entry_points.txt'
+adding 'nju_secondhand-1.0.0.dist-info/top_level.txt'
+adding 'nju_secondhand-1.0.0.dist-info/RECORD'
+removing build\bdist.win-amd64\wheel
+Successfully built nju_secondhand-1.0.0.tar.gz and nju_secondhand-1.0.0-py3-none-any.whl

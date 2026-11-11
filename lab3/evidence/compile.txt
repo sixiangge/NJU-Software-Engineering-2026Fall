@@ -1,0 +1,2 @@
+COMMAND: ['C:\\Users\\25153\\Miniconda3\\python.exe', '-m', 'compileall', '-q', 'src']
+EXIT CODE: 0

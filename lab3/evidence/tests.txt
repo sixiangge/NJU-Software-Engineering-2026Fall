@@ -1,0 +1,50 @@
+COMMAND: ['C:\\Users\\25153\\Miniconda3\\python.exe', '-W', 'error::ResourceWarning', '-m', 'unittest', 'discover', '-s', 'tests', '-v']
+EXIT CODE: 0
+
+test_audit_and_statistics_scopes (test_application.Scenario.test_audit_and_statistics_scopes) ... ok
+test_audit_failure_rolls_back_business (test_application.Scenario.test_audit_failure_rolls_back_business) ... ok
+test_audit_insert_failure_rolls_back (test_application.Scenario.test_audit_insert_failure_rolls_back) ... ok
+test_backup_restore_is_consistent (test_application.Scenario.test_backup_restore_is_consistent) ... ok
+test_ban_revokes_existing_session_and_replay (test_application.Scenario.test_ban_revokes_existing_session_and_replay) ... ok
+test_beijing_date_boundaries (test_application.Scenario.test_beijing_date_boundaries) ... ok
+test_business_failure_retains_failure_log (test_application.Scenario.test_business_failure_retains_failure_log) ... ok
+test_cancel_replay_cannot_release_later_claim (test_application.Scenario.test_cancel_replay_cannot_release_later_claim) ... ok
+test_complete_and_release_concurrent (test_application.Scenario.test_complete_and_release_concurrent) ... ok
+test_complete_replay_counts_one_sale (test_application.Scenario.test_complete_replay_counts_one_sale) ... ok
+test_concurrent_buyers_one_winner (test_application.Scenario.test_concurrent_buyers_one_winner) ... ok
+test_concurrent_cancel_and_confirm_one_winner (test_application.Scenario.test_concurrent_cancel_and_confirm_one_winner) ... ok
+test_confirmed_cannot_cancel_or_timeout (test_application.Scenario.test_confirmed_cannot_cancel_or_timeout) ... ok
+test_contacts_revoked_after_cancel (test_application.Scenario.test_contacts_revoked_after_cancel) ... ok
+test_disabled_category_blocks_submission (test_application.Scenario.test_disabled_category_blocks_submission) ... ok
+test_duplicate_request_replays_once (test_application.Scenario.test_duplicate_request_replays_once) ... ok
+test_expiry_boundary_persists_when_confirm_rejected (test_application.Scenario.test_expiry_boundary_persists_when_confirm_rejected) ... ok
+test_fake_image_rejected (test_application.Scenario.test_fake_image_rejected) ... ok
+test_full_trade_and_exact_statistics (test_application.Scenario.test_full_trade_and_exact_statistics) ... ok
+test_historical_category_snapshot (test_application.Scenario.test_historical_category_snapshot) ... ok
+test_incomplete_draft_and_invalid_filled_price (test_application.Scenario.test_incomplete_draft_and_invalid_filled_price) ... ok
+test_invite_consumed_atomically (test_application.Scenario.test_invite_consumed_atomically) ... ok
+test_lockout_and_expiry (test_application.Scenario.test_lockout_and_expiry) ... ok
+test_login_failure_window_resets (test_application.Scenario.test_login_failure_window_resets) ... ok
+test_new_key_returns_existing_reservation (test_application.Scenario.test_new_key_returns_existing_reservation) ... ok
+test_normalized_username_unique (test_application.Scenario.test_normalized_username_unique) ... ok
+test_outbox_retry_does_not_duplicate (test_application.Scenario.test_outbox_retry_does_not_duplicate) ... ok
+test_pagination_stable (test_application.Scenario.test_pagination_stable) ... ok
+test_password_boundaries (test_application.Scenario.test_password_boundaries) ... ok
+test_prices_reject_invalid_and_nonfinite (test_application.Scenario.test_prices_reject_invalid_and_nonfinite) ... ok
+test_query_intersection_and_literal_keyword (test_application.Scenario.test_query_intersection_and_literal_keyword) ... ok
+test_recovery_only_to_draft (test_application.Scenario.test_recovery_only_to_draft) ... ok
+test_release_requires_two_consents (test_application.Scenario.test_release_requires_two_consents) ... ok
+test_restart_replays_persisted_result (test_application.Scenario.test_restart_replays_persisted_result) ... ok
+test_same_key_different_payload_denied (test_application.Scenario.test_same_key_different_payload_denied) ... ok
+test_self_and_admin_reservation_denied (test_application.Scenario.test_self_and_admin_reservation_denied) ... ok
+test_sold_violation_retains_sale (test_application.Scenario.test_sold_violation_retains_sale) ... ok
+test_stale_version_after_state_cycle_denied (test_application.Scenario.test_stale_version_after_state_cycle_denied) ... ok
+test_unauthorized_reservation_read_and_mutation (test_application.Scenario.test_unauthorized_reservation_read_and_mutation) ... ok
+test_unknown_result_is_not_failure (test_application.Scenario.test_unknown_result_is_not_failure) ... ok
+test_violation_closes_and_hides (test_application.Scenario.test_violation_closes_and_hides) ... ok
+test_withdraw_invalidates_review (test_application.Scenario.test_withdraw_invalidates_review) ... ok
+
+----------------------------------------------------------------------
+Ran 42 tests in 31.898s
+
+OK
