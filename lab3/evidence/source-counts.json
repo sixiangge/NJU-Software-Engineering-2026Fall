@@ -1,0 +1,71 @@
+{
+  "files": [
+    {
+      "file": "src\\secondhand\\__init__.py",
+      "physical": 3,
+      "code": 1
+    },
+    {
+      "file": "src\\secondhand\\__main__.py",
+      "physical": 6,
+      "code": 3
+    },
+    {
+      "file": "src\\secondhand\\accounts.py",
+      "physical": 206,
+      "code": 176
+    },
+    {
+      "file": "src\\secondhand\\application.py",
+      "physical": 15,
+      "code": 8
+    },
+    {
+      "file": "src\\secondhand\\catalog.py",
+      "physical": 282,
+      "code": 246
+    },
+    {
+      "file": "src\\secondhand\\cli.py",
+      "physical": 313,
+      "code": 291
+    },
+    {
+      "file": "src\\secondhand\\core.py",
+      "physical": 206,
+      "code": 174
+    },
+    {
+      "file": "src\\secondhand\\database.py",
+      "physical": 163,
+      "code": 148
+    },
+    {
+      "file": "src\\secondhand\\domain.py",
+      "physical": 108,
+      "code": 73
+    },
+    {
+      "file": "src\\secondhand\\operations.py",
+      "physical": 71,
+      "code": 52
+    },
+    {
+      "file": "src\\secondhand\\queries.py",
+      "physical": 316,
+      "code": 286
+    },
+    {
+      "file": "src\\secondhand\\security.py",
+      "physical": 36,
+      "code": 21
+    },
+    {
+      "file": "src\\secondhand\\trading.py",
+      "physical": 262,
+      "code": 238
+    }
+  ],
+  "physical": 1987,
+  "code_without_blank_comment_docstring": 1717
+}

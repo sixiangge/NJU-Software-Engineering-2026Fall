@@ -1,0 +1,4 @@
+COMMAND: ['C:\\Users\\25153\\Miniconda3\\python.exe', '-m', 'ruff', 'format', '--check', '.']
+EXIT CODE: 0
+
+18 files already formatted

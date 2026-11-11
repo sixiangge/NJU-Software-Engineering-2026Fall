@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nju-secondhand"
+version = "1.0.0"
+description = "Offline secondhand trading, software engineering lab 3"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["Pillow>=10,<13"]
+
+[project.optional-dependencies]
+dev = ["ruff==0.14.3", "build==1.5.1"]
+
+[project.scripts]
+secondhand = "secondhand.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]

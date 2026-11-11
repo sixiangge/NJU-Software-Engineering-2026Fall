@@ -1,0 +1,125 @@
+COMMAND: ['C:\\Users\\25153\\Miniconda3\\python.exe', 'tools/demo.py']
+EXIT CODE: 0
+
+{
+  "notice": "模型编写脚本模拟操作；预约不涉及线上付款",
+  "published": {
+    "kind": "items",
+    "id": 1,
+    "original_status": "published",
+    "replayed": false,
+    "current_status": "published",
+    "current_version": 5
+  },
+  "search_total": 1,
+  "cancelled": {
+    "kind": "reservations",
+    "id": 1,
+    "original_status": "cancelled",
+    "replayed": false,
+    "current_status": "cancelled",
+    "current_version": 2
+  },
+  "reserved": {
+    "kind": "reservations",
+    "id": 2,
+    "original_status": "pending",
+    "replayed": false,
+    "current_status": "pending",
+    "current_version": 1
+  },
+  "confirmed": {
+    "kind": "reservations",
+    "id": 2,
+    "original_status": "confirmed",
+    "replayed": false,
+    "current_status": "confirmed",
+    "current_version": 2
+  },
+  "completed": {
+    "kind": "reservations",
+    "id": 2,
+    "original_status": "completed",
+    "replayed": false,
+    "current_status": "completed",
+    "current_version": 3
+  },
+  "replay": {
+    "kind": "reservations",
+    "id": 2,
+    "original_status": "completed",
+    "replayed": true,
+    "current_status": "completed",
+    "current_version": 3
+  },
+  "statistics": {
+    "start": "2026-01-01",
+    "end": "2030-12-31",
+    "timezone": "UTC+08:00",
+    "inventory": [
+      {
+        "id": 1,
+        "name": "数码",
+        "published_count": 0
+      }
+    ],
+    "sales": [
+      {
+        "category_id": 1,
+        "category_name": "数码",
+        "completed_count": 1,
+        "recorded_amount_cents": 9950,
+        "flagged_count": 0
+      }
+    ],
+    "notice": "记录成交金额采用预约标价快照，不代表真实线下付款"
+  },
+  "buyer_messages": [
+    {
+      "id": 10,
+      "event_id": 10,
+      "recipient_id": 3,
+      "reservation_id": 2,
+      "body": "预约#2：completed；商品：机械键盘",
+      "created_at": 1794367907.877986,
+      "read_at": null
+    },
+    {
+      "id": 8,
+      "event_id": 8,
+      "recipient_id": 3,
+      "reservation_id": 2,
+      "body": "预约#2：confirmed；商品：机械键盘",
+      "created_at": 1794367907.8779788,
+      "read_at": null
+    },
+    {
+      "id": 6,
+      "event_id": 6,
+      "recipient_id": 3,
+      "reservation_id": 2,
+      "body": "预约#2：pending；商品：机械键盘",
+      "created_at": 1794367907.8779716,
+      "read_at": null
+    },
+    {
+      "id": 4,
+      "event_id": 4,
+      "recipient_id": 3,
+      "reservation_id": 1,
+      "body": "预约#1：cancelled；商品：机械键盘",
+      "created_at": 1794367907.8779635,
+      "read_at": null
+    },
+    {
+      "id": 2,
+      "event_id": 2,
+      "recipient_id": 3,
+      "reservation_id": 1,
+      "body": "预约#1：pending；商品：机械键盘",
+      "created_at": 1794367907.8779519,
+      "read_at": null
+    }
+  ],
+  "invariant_errors": []
+}

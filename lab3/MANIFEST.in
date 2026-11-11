@@ -1,0 +1,4 @@
+include README.md ai-log.md review-checklist.md
+recursive-include tools *.py
+recursive-include tests *.py
+recursive-include evidence *.txt *.json

@@ -1,0 +1,25 @@
+Branch baseline correction (2026-11-11)
+The initial branch inherited seven local lab2 commits. That baseline was incorrect.
+The branch has been rebuilt on origin/master, preserving only the two lab3 commits.
+All lab2 and lab3 working files were checked by SHA-256 and remain unchanged.
+Local master retains the lab2 history. A local backup branch also retains the original lab3 tip.
+New base: 6f22cfcc94e20f2d831883a7edb2866d27db6d2d
+Rebuilt implementation commit: ceb8ecf48d51610b1bb1b1954f2d609bfd38503b
+Rebuilt packaging commit: 431cba53e8dbbe7cdbd2c7edde9b4e22aa1bb6f9
+The final remote branch must have only lab3/ paths relative to origin/master.
+
+Historical verification before the correction (superseded branch history):
+
+Implementation commit and remote verification; direct connection with proxy disabled.
+
+COMMAND: git rev-parse HEAD
+EXIT CODE: 0
+d5d3af9983d13ebf3b130dc5a8a177cf8f002dca
+
+COMMAND: git branch --show-current
+EXIT CODE: 0
+codex/lab3-software-implementation
+
+COMMAND: git -c http.proxy= -c https.proxy= -c http.version=HTTP/1.1 ls-remote origin refs/heads/codex/lab3-software-implementation
+EXIT CODE: 0
+d5d3af9983d13ebf3b130dc5a8a177cf8f002dca	refs/heads/codex/lab3-software-implementation
